@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using RestSharp;
+using RestSharp.Deserializers;
+using RestSharp.Serializers;
+using SageOneApi.Interfaces;
+using SageOneApi.Models;
+
+namespace SageOneApi.Requests
+{
+    public class CustomerRequest : RequestBase, ICustomerRequest
+    {
+        public CustomerRequest(IRestClient client, string apiKey, int companyId) : base(client, apiKey, companyId) { }
+
+        public Customer Get(int id)
+        {
+            var response = _client.Execute<Customer>(new RestRequest(String.Format("Customer/Get/{0}?apikey={1}&companyid={2}", id, _apiKey,_companyId), Method.GET));
+            return response.Data;
+        }
+
+        public ResultRoot<List<Customer>> Get()
+        {
+            var url = string.Format("Customer/Get?apikey={0}&companyid={1}", _apiKey,_companyId);
+            var request = new RestRequest(url, Method.GET);
+            request.RequestFormat = DataFormat.Json;
+
+            var response = _client.Execute(request);
+            JsonDeserializer deserializer = new JsonDeserializer();
+
+            return deserializer.Deserialize<ResultRoot<List<Customer>>>(response);
+        }
+
+        public Customer Save(Customer customer)
+        {
+            var url = string.Format("Customer/Save?apikey={0}&companyid={1}", _apiKey, _companyId);
+            var request = new RestRequest(url, Method.POST) { JsonSerializer = new JsonSerializer()};
+            request.RequestFormat = DataFormat.Json;
+            request.AddBody(customer);
+            var response = _client.Execute<Customer>(request);
+            return response.Data;
+        }
+    }
+}
