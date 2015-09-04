@@ -15,11 +15,12 @@ namespace SageOneApi
         private readonly int _companyId;
         private readonly IRestClient _client;
 
-        public CompanyRequest CompanyRequest { get { return new CompanyRequest(_client, _apiKey); } }
-        public CustomerRequest CustomerRequest { get { return new CustomerRequest(_client, _apiKey,_companyId); } }
         public AccountRequest AccountRequest { get { return new AccountRequest(_client, _apiKey, _companyId); } }
+        public ItemRequest ItemRequest { get { return new ItemRequest(_client, _apiKey, _companyId); } }
+        public CompanyRequest CompanyRequest { get { return new CompanyRequest(_client, _apiKey); } }
+        public CustomerRequest CustomerRequest { get { return new CustomerRequest(_client, _apiKey, _companyId); } }
 
-        public ApiRequest(string username,string password, string apiKey, int companyId)
+        public ApiRequest(string username, string password, string apiKey, int companyId)
         {
             _apiKey = apiKey;
             _companyId = companyId;
@@ -27,7 +28,7 @@ namespace SageOneApi
             _client = new RestClient
             {
                 BaseUrl = new Uri("https://accounting.sageone.co.za/api/1.1.1/"),
-                Authenticator = new HttpBasicAuthenticator(username,password)
+                Authenticator = new HttpBasicAuthenticator(username, password)
             };
         }
     }

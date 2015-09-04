@@ -48,6 +48,9 @@
     <Compile Include="Interfaces\IAccountRequest.cs" />
     <Compile Include="Interfaces\ICompanyRequest.cs" />
     <Compile Include="Interfaces\ICustomerRequest.cs" />
+    <Compile Include="Interfaces\IItemRequest.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Requests\ItemRequest.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DefaultPricelist.cs" />

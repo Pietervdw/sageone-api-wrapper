@@ -23,6 +23,12 @@ Currently, the following objects are represented in the library:
   
 - Company
   * Get Current
+  
+- Item
+  * Get All
+  * Get
+  * Save(Create and Update)
+  * Delete
 
 This project borrowed heavily from the concepts used by Scott Schluer and his [.Net Wrapper for the Highrise Api](https://github.com/scottschluer/highrise-api)
 
