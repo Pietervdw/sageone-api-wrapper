@@ -19,9 +19,13 @@ namespace SageOneApi.Requests
             return response.Data;
         }
 
-        public PagingResponse<List<Customer>> Get()
+        public PagingResponse<List<Customer>> Get(string filter="")
         {
-            var url = string.Format("Customer/Get?apikey={0}&companyid={1}", _apiKey,_companyId);
+            var url = string.Format("Customer/Get?apikey={0}&companyid={1}", _apiKey, _companyId);
+
+            if(!string.IsNullOrEmpty(filter))
+                url = string.Format("Customer/Get?apikey={0}&companyid={1}&$filter={2}", _apiKey, _companyId, filter);
+
             var request = new RestRequest(url, Method.GET);
             request.RequestFormat = DataFormat.Json;
 

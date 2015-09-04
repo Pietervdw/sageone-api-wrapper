@@ -10,8 +10,9 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void GetAll()
         {
+            string filter = "Email eq 'info@contoso.com'";
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var customers = api.CustomerRequest.Get();
+            var customers = api.CustomerRequest.Get(filter);
         }
 
         [TestMethod]

@@ -17,7 +17,8 @@ namespace SageOneApi.Interfaces
         /// Gets a collection of customers.
         /// </summary>
         /// <returns>An List collection of <see cref="Customer"/> objects</returns>
-        PagingResponse<List<Customer>> Get();
+        /// <param name="filter">Optional OData Filter Query read more at http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption </param>
+        PagingResponse<List<Customer>> Get(string filter = "");
 
         /// <summary>
         /// Saves the specified customer.
