@@ -45,15 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiRequest.cs" />
+    <Compile Include="Interfaces\IAccountRequest.cs" />
     <Compile Include="Interfaces\ICompanyRequest.cs" />
     <Compile Include="Interfaces\ICustomerRequest.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\DefaultPricelist.cs" />
-    <Compile Include="Models\ResultRoot.cs" />
+    <Compile Include="Models\PagingResponse.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\SalesRepresentative.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AccountRequest.cs" />
     <Compile Include="Requests\CompanyRequest.cs" />
     <Compile Include="Requests\CustomerRequest.cs" />
     <Compile Include="Requests\RequestBase.cs" />

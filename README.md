@@ -7,11 +7,20 @@ This project is under active development. If you wish to contribute, please foll
 
 Currently, the following objects are represented in the library:
 
+- Account
+  * Get All
+  * Get
+  * Save(Create and Update)
+  * Delete
+  * Get with System Accounts
+  * Get by Category
+  
 - Customer
   * Get All
   * Get
   * Save(Create and Update)
   * Delete
+  
 - Company
   * Get Current
 

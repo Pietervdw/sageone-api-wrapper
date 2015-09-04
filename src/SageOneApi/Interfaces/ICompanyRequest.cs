@@ -8,6 +8,6 @@ namespace SageOneApi.Interfaces
         /// Retrieves the current Company.
         /// </summary>
         /// <returns>A <see cref="Company"/> object</returns>
-        ResultRoot<Company> Current();
+        PagingResponse<Company> Current();
     }
 }

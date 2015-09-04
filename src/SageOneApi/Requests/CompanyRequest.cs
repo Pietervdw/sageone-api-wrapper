@@ -14,7 +14,7 @@ namespace SageOneApi.Requests
     {
         public CompanyRequest(IRestClient client, string apiKey) : base(client, apiKey) { }
 
-        public ResultRoot<Company> Current()
+        public PagingResponse<Company> Current()
         {
             var url = string.Format("Company/Get?apikey={0}", _apiKey);
             var request = new RestRequest(url, Method.GET);
@@ -22,7 +22,7 @@ namespace SageOneApi.Requests
 
             var response = _client.Execute(request);
             JsonDeserializer deserializer = new JsonDeserializer();
-            return deserializer.Deserialize<ResultRoot<Company>>(response);
+            return deserializer.Deserialize<PagingResponse<Company>>(response);
         }
     }
 }

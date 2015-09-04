@@ -19,7 +19,7 @@ namespace SageOneApi.Requests
             return response.Data;
         }
 
-        public ResultRoot<List<Customer>> Get()
+        public PagingResponse<List<Customer>> Get()
         {
             var url = string.Format("Customer/Get?apikey={0}&companyid={1}", _apiKey,_companyId);
             var request = new RestRequest(url, Method.GET);
@@ -28,7 +28,7 @@ namespace SageOneApi.Requests
             var response = _client.Execute(request);
             JsonDeserializer deserializer = new JsonDeserializer();
 
-            return deserializer.Deserialize<ResultRoot<List<Customer>>>(response);
+            return deserializer.Deserialize<PagingResponse<List<Customer>>>(response);
         }
 
         public Customer Save(Customer customer)

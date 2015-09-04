@@ -6,7 +6,7 @@ using RestSharp.Serializers;
 
 namespace SageOneApi.Models
 {
-    public class ResultRoot<T>
+    public class PagingResponse<T>
     {
         public int TotalResults { get; set; }
         public int ReturnedResults { get; set; }

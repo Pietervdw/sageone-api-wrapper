@@ -17,7 +17,7 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void Get()
         {
-            int customerId = 3876763;
+            int customerId = 0;
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var customer = api.CustomerRequest.Get(customerId);
         }
@@ -37,7 +37,7 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void Delete()
         {
-            int customerId = 3876767;
+            int customerId = 0;
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var result = api.CustomerRequest.Delete(customerId);
         }
