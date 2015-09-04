@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using RestSharp;
 using RestSharp.Deserializers;
 using RestSharp.Serializers;
@@ -38,6 +39,13 @@ namespace SageOneApi.Requests
             request.AddBody(customer);
             var response = _client.Execute<Customer>(request);
             return response.Data;
+        }
+
+        public bool Delete(int id)
+        {
+            var url = string.Format("Customer/Delete/{0}?apikey={1}&companyid={2}",id, _apiKey, _companyId);
+            var response = _client.Execute<Company>(new RestRequest(url, Method.DELETE));
+            return response.ResponseStatus == ResponseStatus.Completed;
         }
     }
 }

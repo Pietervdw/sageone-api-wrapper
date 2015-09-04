@@ -24,5 +24,7 @@ namespace SageOneApi.Interfaces
         /// <param name="customer">The customer.</param>
         /// <returns>A <see cref="Customer"/> object, populated with updated/new values</returns>
         Customer Save(Customer customer);
+
+        bool Delete(int id);
     }
 }

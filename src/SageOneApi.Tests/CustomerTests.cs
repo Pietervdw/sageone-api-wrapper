@@ -17,7 +17,7 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void Get()
         {
-            int customerId = 3873711;
+            int customerId = 3876763;
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var customer = api.CustomerRequest.Get(customerId);
         }
@@ -32,6 +32,14 @@ namespace SageOneApi.Tests
                 CommunicationMethod = 1
             };
             api.CustomerRequest.Save(customer);
+        }
+
+        [TestMethod]
+        public void Delete()
+        {
+            int customerId = 3876767;
+            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+            var result = api.CustomerRequest.Delete(customerId);
         }
     }
 }

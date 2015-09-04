@@ -8,7 +8,12 @@ This project is under active development. If you wish to contribute, please foll
 Currently, the following objects are represented in the library:
 
 - Customer
-- Company (Partially)
+  * Get All
+  * Get
+  * Save(Create and Update)
+  * Delete
+- Company
+  * Get Current
 
 This project borrowed heavily from the concepts used by Scott Schluer and his [.Net Wrapper for the Highrise Api](https://github.com/scottschluer/highrise-api)
 
