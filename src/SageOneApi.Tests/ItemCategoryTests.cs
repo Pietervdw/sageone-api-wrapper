@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SageOneApi.Models;
 
 namespace SageOneApi.Tests
@@ -38,5 +37,6 @@ namespace SageOneApi.Tests
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var result = api.ItemCategoryRequest.Delete(categoryId);
 		}
+
 	}
 }

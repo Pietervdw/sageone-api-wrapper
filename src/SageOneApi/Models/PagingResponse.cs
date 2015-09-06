@@ -1,8 +1,4 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using RestSharp.Deserializers;
-using RestSharp.Serializers;
+﻿using System.Collections.Generic;
 
 namespace SageOneApi.Models
 {

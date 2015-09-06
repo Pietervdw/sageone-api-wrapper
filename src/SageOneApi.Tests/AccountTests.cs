@@ -27,8 +27,7 @@ namespace SageOneApi.Tests
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var account = api.AccountRequest.Get(accountId);
         }
-
-
+		
         [TestMethod]
         public void Save()
         {
@@ -40,8 +39,7 @@ namespace SageOneApi.Tests
 
             var newaccount = api.AccountRequest.Save(account);
         }
-
-
+		
         [TestMethod]
         public void Delete()
         {

@@ -1,8 +1,7 @@
 ﻿namespace SageOneApi.Models
 {
-    public class SalesRepresentative
+	public class SalesRepresentative : BaseModel
     {
-        public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Name { get; set; }

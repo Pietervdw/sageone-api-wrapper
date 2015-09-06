@@ -10,7 +10,7 @@ Currently, the following objects are represented in the library:
 - Account
   * Get All
   * Get
-  * Save(Create and Update)
+  * Save (Create and Update)
   * Delete
   * Get with System Accounts
   * Get by Category
@@ -18,7 +18,7 @@ Currently, the following objects are represented in the library:
 - Customer
   * Get All
   * Get
-  * Save(Create and Update)
+  * Save (Create and Update)
   * Delete
   
 - Company
@@ -27,14 +27,22 @@ Currently, the following objects are represented in the library:
 - Item
   * Get All
   * Get
-  * Save(Create and Update)
+  * Save (Create and Update)
   * Delete
   
 - Item Category
   * Get All
   * Get
-  * Save(Create and Update)
+  * Save (Create and Update)
   * Delete
+  
+- Supplier
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete
+  
+If you need to create test data for your developer account, take a look at the tests inside SampleDataCreate.cs
 
 This project borrowed heavily from the concepts used by Scott Schluer and his [.Net Wrapper for the Highrise Api](https://github.com/scottschluer/highrise-api)
 

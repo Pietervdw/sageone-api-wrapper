@@ -1,11 +1,9 @@
 ﻿using System;
-using RestSharp.Serializers;
 
-namespace SageOneApi.Models
+namespace SageOneApi.Models 
 {
-    public class Company
+	public class Company : BaseModel
     {
-        public int ID { get; set; }
         public string Name { get; set; }
         public string CurrencySymbol { get; set; }
         public int CurrencyDecimalDigits { get; set; }

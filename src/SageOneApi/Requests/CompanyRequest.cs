@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using RestSharp;
+﻿using RestSharp;
 using RestSharp.Deserializers;
-using RestSharp.Extensions;
 using SageOneApi.Interfaces;
 using SageOneApi.Models;
 

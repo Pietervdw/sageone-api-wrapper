@@ -1,8 +1,7 @@
 ﻿namespace SageOneApi.Models
 {
-    public class DefaultPricelist
+	public class DefaultPricelist : BaseModel
     {
-        public int ID { get; set; }
         public string Description { get; set; }
         public bool IsDefault { get; set; }
     }

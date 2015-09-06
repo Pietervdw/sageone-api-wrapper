@@ -1,13 +1,10 @@
-﻿using RestSharp.Serializers;
-
-namespace SageOneApi.Models
+﻿namespace SageOneApi.Models
 {
-    public class Customer
+    public class Customer : BaseModel
     {
-        public int ID { get; set; }
         public string Name { get; set; }
         public Category Category { get; set; }
-        public int SalesRepresentativeId { get; set; }
+        public int? SalesRepresentativeId { get; set; }
         public SalesRepresentative SalesRepresentative { get; set; }
         public string TaxReference { get; set; }
         public string ContactName { get; set; }
@@ -17,8 +14,8 @@ namespace SageOneApi.Models
         public string Email { get; set; }
         public string WebAddress { get; set; }
         public bool Active { get; set; }
-        public float Balance { get; set; }
-        public float CreditLimit { get; set; }
+		public decimal Balance { get; set; }
+		public decimal CreditLimit { get; set; }
         public int CommunicationMethod { get; set; }
         public string PostalAddress01 { get; set; }
         public string PostalAddress02 { get; set; }
@@ -37,9 +34,9 @@ namespace SageOneApi.Models
         public string TextField1 { get; set; }
         public string TextField2 { get; set; }
         public string TextField3 { get; set; }
-        public float NumericField1 { get; set; }
-        public float NumericField2 { get; set; }
-        public float NumericField3 { get; set; }
+		public decimal NumericField1 { get; set; }
+		public decimal NumericField2 { get; set; }
+		public decimal NumericField3 { get; set; }
         public bool YesNoField1 { get; set; }
         public bool YesNoField2 { get; set; }
         public bool YesNoField3 { get; set; }
