@@ -51,11 +51,13 @@
     <Compile Include="Interfaces\IItemCategoryRequest.cs" />
     <Compile Include="Interfaces\IItemRequest.cs" />
     <Compile Include="Interfaces\ISupplierRequest.cs" />
+    <Compile Include="Models\AdditionalItemPrice.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\ItemCategory.cs" />
+    <Compile Include="Models\ItemReportGroup.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\TaxType.cs" />
     <Compile Include="Requests\ItemCategoryRequest.cs" />
     <Compile Include="Requests\ItemRequest.cs" />
     <Compile Include="Models\Account.cs" />

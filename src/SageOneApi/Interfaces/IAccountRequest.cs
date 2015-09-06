@@ -18,14 +18,14 @@ namespace SageOneApi.Interfaces
         /// </summary>
         /// <param name="includeSystemAccounts">If set to true will include system accounts</param>
         /// <returns>An List collection of <see cref="Account"/> objects</returns>
-        PagingResponse<List<Account>> Get(bool includeSystemAccounts=false);
+        PagingResponse<Account> Get(bool includeSystemAccounts=false);
 
         /// <summary>
         /// Gets a collection of accounts by category
         /// </summary>
         /// <param name="categoryId">Id of the category</param>
         /// <returns>An List collection of <see cref="Account"/> objects</returns>
-        PagingResponse<List<Account>> GetByCategory(int categoryId);
+        PagingResponse<Account> GetByCategory(int categoryId);
 
         /// <summary>
         /// Saves the specified account.

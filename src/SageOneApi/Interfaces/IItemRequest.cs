@@ -18,7 +18,7 @@ namespace SageOneApi.Interfaces
         /// </summary>
         /// <returns>An List collection of <see cref="Item"/> objects</returns>
         /// <param name="filter">Optional OData Filter Query read more at http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption </param>
-        PagingResponse<List<Item>> Get(string filter = "");
+        PagingResponse<Item> Get(string filter = "");
 
         /// <summary>
         /// Saves the specified item.

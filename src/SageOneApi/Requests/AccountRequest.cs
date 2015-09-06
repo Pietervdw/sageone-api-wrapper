@@ -18,7 +18,7 @@ namespace SageOneApi.Requests
             return response.Data;
         }
 
-        public PagingResponse<List<Account>> Get(bool includeSystemAccounts = false)
+        public PagingResponse<Account> Get(bool includeSystemAccounts = false)
         {
             var url = string.Format("Account/Get?apikey={0}&companyid={1}", _apiKey, _companyId);
 
@@ -31,10 +31,10 @@ namespace SageOneApi.Requests
             var response = _client.Execute(request);
             JsonDeserializer deserializer = new JsonDeserializer();
 
-            return deserializer.Deserialize<PagingResponse<List<Account>>>(response);
+            return deserializer.Deserialize<PagingResponse<Account>>(response);
         }
 
-        public PagingResponse<List<Account>> GetByCategory(int categoryId)
+        public PagingResponse<Account> GetByCategory(int categoryId)
         {
             var url = string.Format("Account/GetAccountsByCategoryId/{0}?apikey={1}&companyid={2}",categoryId, _apiKey, _companyId);
 
@@ -44,7 +44,7 @@ namespace SageOneApi.Requests
             var response = _client.Execute(request);
             JsonDeserializer deserializer = new JsonDeserializer();
 
-            return deserializer.Deserialize<PagingResponse<List<Account>>>(response);
+            return deserializer.Deserialize<PagingResponse<Account>>(response);
         }
 
         public Account Save(Account account)

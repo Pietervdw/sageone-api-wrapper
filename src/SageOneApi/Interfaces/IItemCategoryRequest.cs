@@ -9,23 +9,23 @@ namespace SageOneApi.Interfaces
 		/// Gets a single item category by ID.
 		/// </summary>
 		/// <param name="id">The ID of the item category.</param>
-		/// <returns>A <see cref="ItemCategory"/> object</returns>
+		/// <returns>A <see cref="Category"/> object</returns>
 		/// 
-		ItemCategory Get(int id);
+		Category Get(int id);
 
 		/// <summary>
 		/// Gets a collection of item categories.
 		/// </summary>
-		/// <returns>An List collection of <see cref="ItemCategory"/> objects</returns>
+		/// <returns>An List collection of <see cref="Category"/> objects</returns>
 		/// <param name="filter">Optional OData Filter Query read more at http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption </param>
-		PagingResponse<List<ItemCategory>> Get(string filter = "");
+		PagingResponse<Category> Get(string filter = "");
 
 		/// <summary>
 		/// Saves the specified customer.
 		/// </summary>
 		/// <param name="category">The item category.</param>
-		/// <returns>A <see cref="Customer"/> object, populated with updated/new values</returns>
-		ItemCategory Save(ItemCategory category);
+		/// <returns>A <see cref="Category"/> object, populated with updated/new values</returns>
+		Category Save(Category category);
 
 		/// <summary>
 		/// Deletes an item category

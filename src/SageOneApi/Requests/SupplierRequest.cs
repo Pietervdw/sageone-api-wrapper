@@ -18,7 +18,7 @@ namespace SageOneApi.Requests
             return response.Data;
         }
 
-		public PagingResponse<List<Supplier>> Get(string filter = "")
+		public PagingResponse<Supplier> Get(string filter = "")
         {
 			var url = string.Format("Supplier/Get?apikey={0}&companyid={1}", _apiKey, _companyId);
 
@@ -31,7 +31,7 @@ namespace SageOneApi.Requests
             var response = _client.Execute(request);
             JsonDeserializer deserializer = new JsonDeserializer();
 
-			return deserializer.Deserialize<PagingResponse<List<Supplier>>>(response);
+			return deserializer.Deserialize<PagingResponse<Supplier>>(response);
         }
 
 		public Supplier Save(Supplier customer)

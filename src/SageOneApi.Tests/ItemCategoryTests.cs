@@ -25,7 +25,7 @@ namespace SageOneApi.Tests
 		public void Save()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var itemCategory = new ItemCategory();
+			var itemCategory = new Category();
 			itemCategory.Description = "Components";
 			var newIteCategory = api.ItemCategoryRequest.Save(itemCategory);
 		}

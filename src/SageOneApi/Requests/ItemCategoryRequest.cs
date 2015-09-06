@@ -12,13 +12,13 @@ namespace SageOneApi.Requests
 	{
 		public ItemCategoryRequest(IRestClient client, string apiKey, int companyId) : base(client, apiKey, companyId) { }
 
-		public ItemCategory Get(int id)
+		public Category Get(int id)
 		{
-			var response = _client.Execute<ItemCategory>(new RestRequest(String.Format("ItemCategory/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+			var response = _client.Execute<Category>(new RestRequest(String.Format("ItemCategory/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
 			return response.Data;
 		}
 
-		public PagingResponse<List<ItemCategory>> Get(string filter = "")
+		public PagingResponse<Category> Get(string filter = "")
 		{
 			var url = string.Format("ItemCategory/Get?apikey={0}&companyid={1}", _apiKey, _companyId);
 
@@ -31,23 +31,23 @@ namespace SageOneApi.Requests
 			var response = _client.Execute(request);
 			JsonDeserializer deserializer = new JsonDeserializer();
 
-			return deserializer.Deserialize<PagingResponse<List<ItemCategory>>>(response);
+			return deserializer.Deserialize<PagingResponse<Category>>(response);
 		}
 
-		public ItemCategory Save(ItemCategory category)
+		public Category Save(Category category)
 		{
 			var url = string.Format("ItemCategory/Save?apikey={0}&companyid={1}", _apiKey, _companyId);
 			var request = new RestRequest(url, Method.POST) { JsonSerializer = new JsonSerializer() };
 			request.RequestFormat = DataFormat.Json;
 			request.AddBody(category);
-			var response = _client.Execute<ItemCategory>(request);
+			var response = _client.Execute<Category>(request);
 			return response.Data;
 		}
 
 		public bool Delete(int id)
 		{
 			var url = string.Format("ItemCategory/Delete/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId);
-			var response = _client.Execute<Company>(new RestRequest(url, Method.DELETE));
+			var response = _client.Execute<Category>(new RestRequest(url, Method.DELETE));
 			return response.ResponseStatus == ResponseStatus.Completed;
 		}
 	}
