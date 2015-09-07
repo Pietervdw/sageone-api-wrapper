@@ -30,10 +30,10 @@ Currently, the following objects are represented in the library:
   * Save (Create and Update)
   * Delete
   
-- Item Category
+- Categories (Account, Asset, BankAccount, Customer, Item, Supplier)
   * Get All
   * Get
-  * Save (Create and Update)
+  * Save (Create and Update) excl. Account Categories
   * Delete
   
 - Supplier

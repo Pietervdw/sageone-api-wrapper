@@ -86,7 +86,7 @@ namespace SageOneApi.Tests
 			};
 
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			itemCategories.ForEach(cat => api.ItemCategoryRequest.Save(cat));
+			itemCategories.ForEach(cat => api.CategoryRequest.Save(cat, Enums.CategoryType.Item));
 		}
 
 		#endregion
@@ -98,7 +98,7 @@ namespace SageOneApi.Tests
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 
-			var categories = api.ItemCategoryRequest.Get().Results;
+			var categories = api.CategoryRequest.Get(Enums.CategoryType.Item).Results;
 			var beverages = categories.Find(r => r.Description == "Beverages");
 			var condiments = categories.Find(r => r.Description == "Condiments");
 			var confections = categories.Find(r => r.Description == "Confections");

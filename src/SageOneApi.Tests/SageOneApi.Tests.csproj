@@ -56,7 +56,7 @@
     <Compile Include="CustomerTests.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="ItemTests.cs" />
-    <Compile Include="ItemCategoryTests.cs" />
+    <Compile Include="CategoryTests.cs" />
     <Compile Include="SampleDataCreate.cs" />
     <Compile Include="SupplierTests.cs" />
   </ItemGroup>
