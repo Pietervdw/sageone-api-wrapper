@@ -12,7 +12,7 @@
 		public string Email { get; set; }
 		public string WebAddress { get; set; }
 		public bool Active { get; set; }
-		public decimal Balance { get; set; }
+		public decimal Balance { get; private set; }
 		public decimal CreditLimit { get; set; }
 		public string PostalAddress01 { get; set; }
 		public string PostalAddress02 { get; set; }
@@ -37,8 +37,8 @@
 		public string DateField1 { get; set; }
 		public string DateField2 { get; set; }
 		public string DateField3 { get; set; }
-		public string Modified { get; set; }
-		public string Created { get; set; }
+		public string Modified { get; private set; }
+		public string Created { get; private set; }
 		public string BusinessRegistrationNumber { get; set; }
 		public string RMCDApprovalNumber { get; set; }
 		public string TaxStatusVerified { get; set; }

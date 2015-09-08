@@ -14,7 +14,7 @@
         public string Email { get; set; }
         public string WebAddress { get; set; }
         public bool Active { get; set; }
-		public decimal Balance { get; set; }
+		public decimal Balance { get; private set; }
 		public decimal CreditLimit { get; set; }
         public int CommunicationMethod { get; set; }
         public string PostalAddress01 { get; set; }
@@ -29,7 +29,7 @@
         public string DeliveryAddress05 { get; set; }
         public bool AutoAllocateToOldestInvoice { get; set; }
         public bool EnableCustomerZone { get; set; }
-        public string CustomerZoneGuid { get; set; }
+		public string CustomerZoneGuid { get; private set; }
         public bool CashSale { get; set; }
         public string TextField1 { get; set; }
         public string TextField2 { get; set; }
@@ -47,8 +47,8 @@
         public DefaultPricelist DefaultPriceList { get; set; }
         public string DefaultPriceListName { get; set; }
         public bool AcceptsElectronicInvoices { get; set; }
-        public string Modified { get; set; }
-        public string Created { get; set; }
+		public string Modified { get; private set; }
+		public string Created { get; private set; }
         public string BusinessRegistrationNumber { get; set; }
         public string TaxStatusVerified { get; set; }
         public int CurrencyId { get; set; }

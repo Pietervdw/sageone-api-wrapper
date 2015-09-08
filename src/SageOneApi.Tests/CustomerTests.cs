@@ -11,7 +11,7 @@ namespace SageOneApi.Tests
 		{
 			string filter = "Email eq 'info@contoso.com'";
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var customers = api.CustomerRequest.Get(filter);
+			var customers = api.CustomerRequest.Get();
 		}
 
 		[TestMethod]
@@ -32,7 +32,6 @@ namespace SageOneApi.Tests
 				AcceptsElectronicInvoices = true,
 				Active = true,
 				AutoAllocateToOldestInvoice = true,
-				Balance = 0,
 				ContactName = "Mr. David R. Robinett",
 				DeliveryAddress01 = "Pappelallee 6667",
 				DeliveryAddress02 = "Solingen",

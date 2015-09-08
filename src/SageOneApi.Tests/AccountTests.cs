@@ -33,8 +33,7 @@ namespace SageOneApi.Tests
         {
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var account = new Account();
-            account.Name = "Other Other Sales";
-            account.AccountType = 5;
+            account.Name = "Other Other Sales 1";
             account.Category = new Category {ID = 1};
 
             var newaccount = api.AccountRequest.Save(account);

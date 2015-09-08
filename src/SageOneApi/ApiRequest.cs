@@ -18,6 +18,7 @@ namespace SageOneApi
 		public CategoryRequest CategoryRequest { get { return new CategoryRequest(_client, _apiKey, _companyId); } }
 		public SalesRepresentativeRequest SalesRepresentativeRequest { get { return new SalesRepresentativeRequest(_client, _apiKey, _companyId); } }
 		public SupplierRequest SupplierRequest { get { return new SupplierRequest(_client, _apiKey, _companyId); } }
+		public TaxInvoiceRequest TaxInvoiceRequest { get { return new TaxInvoiceRequest(_client, _apiKey, _companyId); } }
 
         public ApiRequest(string username, string password, string apiKey, int companyId)
         {
