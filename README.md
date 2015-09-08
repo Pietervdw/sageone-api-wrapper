@@ -36,6 +36,13 @@ Currently, the following objects are represented in the library:
   * Save (Create and Update) excl. Account Categories
   * Delete
   
+- Sales Representative
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete
+  * HasActivity
+  
 - Supplier
   * Get All
   * Get
