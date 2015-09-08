@@ -47,7 +47,7 @@ namespace SageOneApi.Requests
         public bool Delete(int id)
         {
             var url = string.Format("Customer/Delete/{0}?apikey={1}&companyid={2}",id, _apiKey, _companyId);
-            var response = _client.Execute<Company>(new RestRequest(url, Method.DELETE));
+            var response = _client.Execute<Customer>(new RestRequest(url, Method.DELETE));
             return response.ResponseStatus == ResponseStatus.Completed;
         }
     }

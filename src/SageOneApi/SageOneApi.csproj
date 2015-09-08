@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\ICustomerRequest.cs" />
     <Compile Include="Interfaces\ICategoryRequest.cs" />
     <Compile Include="Interfaces\IItemRequest.cs" />
+    <Compile Include="Interfaces\ISalesRepresentativeRequest.cs" />
     <Compile Include="Interfaces\ISupplierRequest.cs" />
     <Compile Include="Models\AdditionalItemPrice.cs" />
     <Compile Include="Models\BaseModel.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Requests\CompanyRequest.cs" />
     <Compile Include="Requests\CustomerRequest.cs" />
     <Compile Include="Requests\RequestBase.cs" />
+    <Compile Include="Requests\SalesRepresentativeRequest.cs" />
     <Compile Include="Requests\SupplierRequest.cs" />
   </ItemGroup>
   <ItemGroup>
