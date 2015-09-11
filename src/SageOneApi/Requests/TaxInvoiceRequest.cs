@@ -17,13 +17,15 @@ namespace SageOneApi.Requests
 			return response.Data;
 		}
 
-		public PagingResponse<TaxInvoice> Get(bool includeDetail = false, bool includeCustomerDetails = false, string filter = "")
+		public PagingResponse<TaxInvoice> Get(bool includeDetail = false, bool includeCustomerDetails = false, string filter = "", int skip = 0)
 		{
-			//var url = string.Format("TaxInvoice/Get?includeDetail={0}&includeCustomerDetails={1}?apikey={2}&companyid={3}",includeDetail.ToString().ToLower(),includeCustomerDetails.ToString().ToLower(), _apiKey, _companyId);
-			var url = string.Format("TaxInvoice/Get?companyid={0}&includeDetail={1}&includeCustomerDetails={2}&apikey={3}",_companyId, includeDetail.ToString().ToLower(), includeCustomerDetails.ToString().ToLower(), _apiKey);
+			var url = string.Format("TaxInvoice/Get?companyid={0}&includeDetail={1}&includeCustomerDetails={2}&apikey={3}", _companyId, includeDetail.ToString().ToLower(), includeCustomerDetails.ToString().ToLower(), _apiKey);
 
 			if (!string.IsNullOrEmpty(filter))
-				url = string.Format("TaxInvoice/Get?includeDetail={0}&includeCustomerDetails={1}?apikey={2}&companyid={3}&$filter={4}",includeDetail,includeCustomerDetails, _apiKey, _companyId, filter);
+				url = string.Format("TaxInvoice/Get?includeDetail={0}&includeCustomerDetails={1}?apikey={2}&companyid={3}&$filter={4}", includeDetail, includeCustomerDetails, _apiKey, _companyId, filter);
+
+			if (skip > 0)
+				url += "&$skip=" + skip;
 
 			var request = new RestRequest(url, Method.GET);
 			request.RequestFormat = DataFormat.Json;

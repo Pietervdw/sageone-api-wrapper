@@ -19,7 +19,8 @@ namespace SageOneApi.Interfaces
 		/// <returns>An List collection of <see cref="Category"/> objects</returns>
 		/// <param name="categoryType">Type of category e.g Account, Analysis, Asset, BankAccount, Customer, Item, Supplier</param>
 		/// <param name="filter">Optional OData Filter Query read more at http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption </param>
-		PagingResponse<Category> Get(Enums.CategoryType categoryType,string filter = "");
+		/// <param name="skip">OData skip parameter. Skips the number of records. Used for paging.</param>
+		PagingResponse<Category> Get(Enums.CategoryType categoryType, string filter = "", int skip = 0);
 
 		/// <summary>
 		/// Saves the specified customer.
@@ -35,6 +36,6 @@ namespace SageOneApi.Interfaces
 		/// <param name="id">The ID of the item category to delete</param>
 		/// <param name="categoryType">Type of category e.g Account, Analysis, Asset, BankAccount, Customer, Item, Supplier</param>
 		/// <returns>True if successfully deleted, otherwise false</returns>
-		bool Delete(int id, Enums.CategoryType categoryType); 
+		bool Delete(int id, Enums.CategoryType categoryType);
 	}
 }

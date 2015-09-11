@@ -18,7 +18,8 @@ namespace SageOneApi.Interfaces
 		/// </summary>
 		/// <returns>An List collection of <see cref="Supplier"/> objects</returns>
 		/// <param name="filter">Optional OData Filter Query read more at http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption </param>
-		PagingResponse<Supplier> Get(string filter = "");
+		/// <param name="skip">OData skip parameter. Skips the number of records. Used for paging.</param>
+		PagingResponse<Supplier> Get(string filter = "", int skip = 0);
 
 		/// <summary>
 		/// Saves the specified supplier.
@@ -32,6 +33,6 @@ namespace SageOneApi.Interfaces
 		/// </summary>
 		/// <param name="id">The ID of the supplier to delete</param>
 		/// <returns>True if successfully deleted, otherwise false</returns>
-		bool Delete(int id); 
+		bool Delete(int id);
 	}
 }

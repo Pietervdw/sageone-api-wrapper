@@ -17,12 +17,15 @@ namespace SageOneApi.Requests
 			return response.Data;
 		}
 
-		public PagingResponse<SalesRepresentative> Get(string filter = "")
+		public PagingResponse<SalesRepresentative> Get(string filter = "", int skip = 0)
 		{
 			var url = string.Format("SalesRepresentative/Get?apikey={0}&companyid={1}", _apiKey, _companyId);
 
 			if (!string.IsNullOrEmpty(filter))
 				url = string.Format("SalesRepresentative/Get?apikey={0}&companyid={1}&$filter={2}", _apiKey, _companyId, filter);
+
+			if (skip > 0)
+				url += "&$skip=" + skip;
 
 			var request = new RestRequest(url, Method.GET);
 			request.RequestFormat = DataFormat.Json;

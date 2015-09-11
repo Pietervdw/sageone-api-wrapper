@@ -18,12 +18,15 @@ namespace SageOneApi.Requests
 			return response.Data;
 		}
 
-		public PagingResponse<Category> Get(Enums.CategoryType categoryType,string filter = "")
+		public PagingResponse<Category> Get(Enums.CategoryType categoryType, string filter = "", int skip = 0)
 		{
-			var url = string.Format("{0}Category/Get?apikey={1}&companyid={2}",categoryType, _apiKey, _companyId);
+			var url = string.Format("{0}Category/Get?apikey={1}&companyid={2}", categoryType, _apiKey, _companyId);
 
 			if (!string.IsNullOrEmpty(filter))
 				url = string.Format("{0}Category/Get?apikey={1}&companyid={2}&$filter={3}", categoryType, _apiKey, _companyId, filter);
+
+			if (skip > 0)
+				url += "&$skip=" + skip;
 
 			var request = new RestRequest(url, Method.GET);
 			request.RequestFormat = DataFormat.Json;
@@ -36,7 +39,7 @@ namespace SageOneApi.Requests
 
 		public Category Save(Category category, Enums.CategoryType categoryType)
 		{
-			if (categoryType==Enums.CategoryType.Account)
+			if (categoryType == Enums.CategoryType.Account)
 			{
 				throw new NotSupportedException("Account Category Save is not supported by the API.");
 			}
