@@ -61,6 +61,7 @@
     <Compile Include="SupplierTests.cs" />
     <Compile Include="SalesRepresentativeTests.cs" />
     <Compile Include="TaxInvoiceTests.cs" />
+    <Compile Include="AssetTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SageOneApi\SageOneApi.csproj">

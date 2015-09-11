@@ -14,6 +14,12 @@ Currently, the following objects are represented in the library:
   * Delete
   * Get with System Accounts
   * Get by Category
+
+- Assets
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete
   
 - Customer
   * Get All
