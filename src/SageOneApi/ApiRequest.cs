@@ -13,6 +13,8 @@ namespace SageOneApi
 
         public AccountRequest AccountRequest { get { return new AccountRequest(_client, _apiKey, _companyId); } }
 		public AssetRequest AssetRequest { get { return new AssetRequest(_client, _apiKey, _companyId); } }
+		public AssetLocationRequest AssetLocationRequest { get { return new AssetLocationRequest(_client, _apiKey, _companyId); } }
+		public AssetNoteRequest AssetNoteRequest { get { return new AssetNoteRequest(_client, _apiKey, _companyId); } }
         public ItemRequest ItemRequest { get { return new ItemRequest(_client, _apiKey, _companyId); } }
         public CompanyRequest CompanyRequest { get { return new CompanyRequest(_client, _apiKey); } }
         public CustomerRequest CustomerRequest { get { return new CustomerRequest(_client, _apiKey, _companyId); } }

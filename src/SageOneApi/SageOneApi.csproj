@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="ApiRequest.cs" />
     <Compile Include="Interfaces\IAccountRequest.cs" />
+    <Compile Include="Interfaces\IAssetLocationRequest.cs" />
+    <Compile Include="Interfaces\IAssetNoteRequest.cs" />
     <Compile Include="Interfaces\IAssetRequest.cs" />
     <Compile Include="Interfaces\ICompanyRequest.cs" />
     <Compile Include="Interfaces\ICustomerRequest.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="Models\AdditionalItemPrice.cs" />
     <Compile Include="Models\Asset.cs" />
     <Compile Include="Models\AssetLocation.cs" />
+    <Compile Include="Models\AssetNote.cs" />
     <Compile Include="Models\Attachment.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Category.cs" />
@@ -68,6 +71,8 @@
     <Compile Include="Models\TaxInvoice.cs" />
     <Compile Include="Models\CommercialDocumentLine.cs" />
     <Compile Include="Models\TaxType.cs" />
+    <Compile Include="Requests\AssetLocationRequest.cs" />
+    <Compile Include="Requests\AssetNoteRequest.cs" />
     <Compile Include="Requests\AssetRequest.cs" />
     <Compile Include="Requests\CategoryRequest.cs" />
     <Compile Include="Requests\ItemRequest.cs" />

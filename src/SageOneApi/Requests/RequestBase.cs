@@ -7,7 +7,7 @@ namespace SageOneApi.Requests
 		protected readonly IRestClient _client;
 		protected readonly string _apiKey;
 		protected readonly int _companyId;
-
+		
 		public RequestBase() { }
 
 		public RequestBase(IRestClient client, string apiKey)

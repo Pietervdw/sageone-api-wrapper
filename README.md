@@ -15,11 +15,23 @@ Currently, the following objects are represented in the library:
   * Get with System Accounts
   * Get by Category
 
-- Assets
+- Asset
   * Get All
   * Get
   * Save (Create and Update)
   * Delete
+
+- Asset Locations
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete
+  
+- Asset Notes
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete 
   
 - Customer
   * Get All
