@@ -4,6 +4,7 @@ A .Net client library for using the Sage One Accounting API.
 Read more about the API at: [https://accounting.sageone.co.za/Marketing/DeveloperProgram.aspx](https://accounting.sageone.co.za/Marketing/DeveloperProgram.aspx) 
 
 This project is under active development. If you wish to contribute, please follow the existing coding conventions and submit a pull request.
+For more information and usage examples visit [http://www.mythicalmanmoth.com/2015/09/08/net-wrapper-sage-one-accounting-api/]
 
 Currently, the following objects are represented in the library:
 
@@ -38,6 +39,12 @@ Currently, the following objects are represented in the library:
   * Get
   * Save (Create and Update)
   * Delete
+  
+- Customer Notes
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete 
   
 - Company
   * Get Current

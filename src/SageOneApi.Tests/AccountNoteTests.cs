@@ -41,7 +41,7 @@ namespace SageOneApi.Tests
 		[TestMethod]
 		public void Delete()
 		{
-			int accountNoteId = 1181;
+			int accountNoteId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var result = api.AccountNoteRequest.Delete(accountNoteId);
 		}

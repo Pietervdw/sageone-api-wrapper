@@ -20,7 +20,8 @@ namespace SageOneApi
         public ItemRequest ItemRequest { get { return new ItemRequest(_client, _apiKey, _companyId); } }
         public CompanyRequest CompanyRequest { get { return new CompanyRequest(_client, _apiKey); } }
         public CustomerRequest CustomerRequest { get { return new CustomerRequest(_client, _apiKey, _companyId); } }
-		public CategoryRequest CategoryRequest { get { return new CategoryRequest(_client, _apiKey, _companyId); } }
+        public CustomerNoteRequest CustomerNoteRequest { get { return new CustomerNoteRequest(_client, _apiKey, _companyId); } }
+        public CategoryRequest CategoryRequest { get { return new CategoryRequest(_client, _apiKey, _companyId); } }
 		public SalesRepresentativeRequest SalesRepresentativeRequest { get { return new SalesRepresentativeRequest(_client, _apiKey, _companyId); } }
 		public SupplierRequest SupplierRequest { get { return new SupplierRequest(_client, _apiKey, _companyId); } }
 		public TaxInvoiceRequest TaxInvoiceRequest { get { return new TaxInvoiceRequest(_client, _apiKey, _companyId); } }
