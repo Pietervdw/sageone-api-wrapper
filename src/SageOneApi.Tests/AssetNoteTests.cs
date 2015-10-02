@@ -29,8 +29,8 @@ namespace SageOneApi.Tests
 			var assetNote = new AssetNote
 			{
 				AssetId = 0,
-				ActionDate = DateTime.Now.ToShortDateString(),
-				EntryDate = DateTime.Now.ToShortDateString(),
+				ActionDate = DateTime.Now,
+				EntryDate = DateTime.Now,
 				Status=true,
 				Subject = "A new note about this asset",
 				Note="A Note Here."

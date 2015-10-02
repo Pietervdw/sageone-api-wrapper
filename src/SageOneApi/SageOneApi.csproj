@@ -55,6 +55,7 @@
     <Compile Include="Interfaces\ICustomerNoteRequest.cs" />
     <Compile Include="Interfaces\ICustomerRequest.cs" />
     <Compile Include="Interfaces\ICategoryRequest.cs" />
+    <Compile Include="Interfaces\IItemNoteRequest.cs" />
     <Compile Include="Interfaces\IItemRequest.cs" />
     <Compile Include="Interfaces\ISalesRepresentativeRequest.cs" />
     <Compile Include="Interfaces\ISupplierRequest.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Models\EmailRequest.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemNote.cs" />
     <Compile Include="Models\ItemReportGroup.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\TaxInvoice.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Requests\AssetRequest.cs" />
     <Compile Include="Requests\CategoryRequest.cs" />
     <Compile Include="Requests\CustomerNoteRequest.cs" />
+    <Compile Include="Requests\ItemNoteRequest.cs" />
     <Compile Include="Requests\ItemRequest.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\DefaultPricelist.cs" />

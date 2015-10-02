@@ -32,8 +32,8 @@ namespace SageOneApi.Tests
                 NotePriority = 1,
                 NoteType = 1,
                 Status = true,
-                ActionDate = DateTime.Now.ToShortDateString(),
-                EntryDate = DateTime.Now.ToShortDateString(),
+                ActionDate = DateTime.Now,
+                EntryDate = DateTime.Now,
                 HasAttachments = false,
                 Subject = "A note about this customer",
                 Note = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at scelerisque tortor. Morbi facilisis vitae nulla a imperdiet. Curabitur molestie rhoncus aliquam. Mauris turpis nibh, lobortis non tincidunt a, ornare eget felis."
