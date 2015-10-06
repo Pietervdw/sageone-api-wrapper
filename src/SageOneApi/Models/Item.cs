@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SageOneApi.Models
 {
@@ -42,6 +43,6 @@ namespace SageOneApi.Models
 		public decimal GPAmount { get; set; }
 		public string ItemReportingGroupPurchasesName { get; set; }
 		public string ItemReportingGroupSalesName { get; set; }
-		public AdditionalItemPrice[] AdditionalItemPrices { get; set; }
+		public List<AdditionalItemPrice> AdditionalItemPrices { get; set; }
 	}
 }
