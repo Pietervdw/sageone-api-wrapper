@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SageOneApi.Models;
+using SageOneApi.Requests;
 
 namespace SageOneApi.Tests
 {
     [TestClass]
     public class TaxInvoiceTests : TestBase
     {
+        private TaxInvoiceRequest taxInvoiceRequest;
+
+        [TestInitialize]
+        public void LocalInit()
+        {
+            taxInvoiceRequest = Api.TaxInvoiceRequest; // Api is declared on TestBase
+        }
+
         [TestMethod]
         public void GetAll()
         {
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var invoices = api.TaxInvoiceRequest.Get(true, true);
+            var invoices = taxInvoiceRequest.Get(true, true);
         }
 
 
@@ -20,28 +29,25 @@ namespace SageOneApi.Tests
         public void Get()
         {
             int invoiceId = 0;
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var invoice = api.TaxInvoiceRequest.Get(invoiceId);
+            var invoice = taxInvoiceRequest.Get(invoiceId);
         }
 
         [TestMethod]
         public void CalculateAndSave()
         {
             int invoiceId = 0;
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var invoice = api.TaxInvoiceRequest.Get(invoiceId);
+            var invoice = taxInvoiceRequest.Get(invoiceId);
             foreach (var line in invoice.Lines)
             {
                 line.Quantity = line.Quantity + 1;
             }
-            var calculatedInvoice = api.TaxInvoiceRequest.Calculate(invoice);
-            var updatedInvoice = api.TaxInvoiceRequest.Save(calculatedInvoice);
+            var calculatedInvoice = taxInvoiceRequest.Calculate(invoice);
+            var updatedInvoice = taxInvoiceRequest.Save(calculatedInvoice);
         }
 
         [TestMethod]
         public void Create()
         {
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var customerId = 0;
             var salesRepId = 0;
 
@@ -49,8 +55,8 @@ namespace SageOneApi.Tests
             var taxTypeId = 0;
 
             TaxInvoice invoice = new TaxInvoice();
-            var customer = api.CustomerRequest.Get(customerId);
-            var salesRep = api.SalesRepresentativeRequest.Get(salesRepId);
+            var customer = Api.CustomerRequest.Get(customerId);
+            var salesRep = Api.SalesRepresentativeRequest.Get(salesRepId);
 
             // Must set both CustomerId and Customer in order to work
             invoice.CustomerId = customerId;
@@ -77,8 +83,9 @@ namespace SageOneApi.Tests
             };
 
             invoice.Lines.Add(line1);
-
-            var newTaxInvoice = api.TaxInvoiceRequest.Save(invoice);
+            
+            var newTaxInvoice = taxInvoiceRequest.Save(invoice);
+            Assert.IsTrue(taxInvoiceRequest.StatusCode == HttpStatusCode.Created);
         }
 
     }

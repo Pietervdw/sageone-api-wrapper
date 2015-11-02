@@ -9,6 +9,7 @@ namespace SageOneApi.Tests
         private string _password = "[YourPassword]";
         private string _apikey = "[YourAPIKey]";
         private int _companyId = 0;
+        public ApiRequest Api;
 
         public string Username
         {
@@ -33,7 +34,7 @@ namespace SageOneApi.Tests
         [TestInitialize]
         public void Init()
         {
-            
+            Api = new ApiRequest(_username, _password, _apikey, _companyId);
         }
     }
 }

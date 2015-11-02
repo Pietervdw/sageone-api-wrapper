@@ -10,11 +10,13 @@ namespace SageOneApi.Requests
 	public class TaxInvoiceRequest : RequestBase, ITaxInvoiceRequest
 	{
 		public TaxInvoiceRequest(IRestClient client, string apiKey, int companyId) : base(client, apiKey, companyId) { }
-
+        
 		public TaxInvoice Get(int id)
 		{
 			var response = _client.Execute<TaxInvoice>(new RestRequest(String.Format("TaxInvoice/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
-			return response.Data;
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return response.Data;
 		}
 
 		public PagingResponse<TaxInvoice> Get(bool includeDetail = false, bool includeCustomerDetails = false, string filter = "", int skip = 0)
@@ -33,7 +35,9 @@ namespace SageOneApi.Requests
 			var response = _client.Execute(request);
 			JsonDeserializer deserializer = new JsonDeserializer();
 
-			return deserializer.Deserialize<PagingResponse<TaxInvoice>>(response);
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return deserializer.Deserialize<PagingResponse<TaxInvoice>>(response);
 		}
 
 		public TaxInvoice Save(TaxInvoice invoice)
@@ -43,6 +47,8 @@ namespace SageOneApi.Requests
 			request.RequestFormat = DataFormat.Json;
 			request.AddBody(invoice);
 			var response = _client.Execute<TaxInvoice>(request);
+		    StatusDescription = response.StatusDescription;
+		    StatusCode = response.StatusCode;
 			return response.Data;
 		}
 
@@ -53,7 +59,9 @@ namespace SageOneApi.Requests
 			request.RequestFormat = DataFormat.Json;
 			request.AddBody(invoice);
 			var response = _client.Execute<TaxInvoice>(request);
-			return response.Data;
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return response.Data;
 		}
 
 		//public bool Email(EmailRequest email)
