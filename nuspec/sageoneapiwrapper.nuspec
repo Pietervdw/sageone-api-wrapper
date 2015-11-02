@@ -16,6 +16,6 @@
     <tags>sage one</tags>
   </metadata>
   <files>
-	<file src="SageOneApi\bin\$configuration$\SageOneApi.dll" target="lib\net40\" />
+	<file src="..\src\SageOneApi\bin\$configuration$\SageOneApi.dll" target="lib\net40\" />
   </files>
 </package>
