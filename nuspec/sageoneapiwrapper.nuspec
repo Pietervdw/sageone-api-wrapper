@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SageOneApiWrapper</id>
+    <version>$version$</version>
+    <title>Sage One Api Wrapper for .Net</title>
+    <authors>Pieter van der Westhuizen</authors>
+    <owners>Pieter van der Westhuizen</owners>
+    <licenseUrl>https://github.com/Pietervdw/sageone-api-wrapper/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Pietervdw/sageone-api-wrapper</projectUrl>
+    <iconUrl>https://avatars1.githubusercontent.com/u/5253872</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .Net client library for using the Sage One Accounting API.</description>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <tags>sage one</tags>
+  </metadata>
+  <files>
+	<file src="SageOneApi\bin\$configuration$\SageOneApi.dll" target="lib\net40\" />
+  </files>
+</package>
