@@ -60,6 +60,7 @@
     <Compile Include="Interfaces\ISalesRepresentativeRequest.cs" />
     <Compile Include="Interfaces\ISupplierRequest.cs" />
     <Compile Include="Interfaces\ITaxInvoiceRequest.cs" />
+    <Compile Include="Interfaces\ITaxTypeRequest.cs" />
     <Compile Include="Models\AccountBalance.cs" />
     <Compile Include="Models\AccountBalanceRequestObject.cs" />
     <Compile Include="Models\AccountNote.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Requests\SalesRepresentativeRequest.cs" />
     <Compile Include="Requests\SupplierRequest.cs" />
     <Compile Include="Requests\TaxInvoiceRequest.cs" />
+    <Compile Include="Requests\TaxTypeRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

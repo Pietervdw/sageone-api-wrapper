@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SageOneApi.Models
 {
 	public class TaxInvoice : BaseModel
 	{
-		public string DueDate { get; set; }
+		public DateTime DueDate { get; set; }
 		public string FromDocument { get; set; }
 		public int FromDocumentId { get; private set; }
 		public int FromDocumentTypeId { get; private set; }
@@ -20,7 +21,7 @@ namespace SageOneApi.Models
 		public int StatusId { get; set; }
 		public string Modified { get; private set; }
 		public string Created { get; private set; }
-		public string Date { get; set; }
+		public DateTime Date { get; set; }
 		public bool Inclusive { get; set; }
 		public decimal DiscountPercentage { get; set; }
 		public string TaxReference { get; set; }
@@ -49,7 +50,7 @@ namespace SageOneApi.Models
 		public bool HasAttachments { get; private set; }
 		public bool HasNotes { get; private set; }
 		public bool HasAnticipatedDate { get; private set; }
-		public string AnticipatedDate { get; private set; }
+		public DateTime AnticipatedDate { get; private set; }
 		public List<CommercialDocumentLine> Lines { get; set; }
 	}
 
