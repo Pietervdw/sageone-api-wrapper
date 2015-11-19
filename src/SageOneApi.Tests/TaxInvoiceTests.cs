@@ -19,21 +19,21 @@ namespace SageOneApi.Tests
         }
 
         [TestMethod]
-        public void GetAll()
+        public void GetAllTaxInvoices()
         {
             var invoices = taxInvoiceRequest.Get(true, true);
         }
 
 
         [TestMethod]
-        public void Get()
+        public void GetTaxInvoice()
         {
             int invoiceId = 0;
             var invoice = taxInvoiceRequest.Get(invoiceId);
         }
 
         [TestMethod]
-        public void CalculateAndSave()
+        public void CalculateAndSaveTaxInvoice()
         {
             int invoiceId = 0;
             var invoice = taxInvoiceRequest.Get(invoiceId);
@@ -46,7 +46,7 @@ namespace SageOneApi.Tests
         }
 
         [TestMethod]
-        public void Create()
+        public void CreateTaxInvoice()
         {
             var customerId = 0;
             var salesRepId = 0;

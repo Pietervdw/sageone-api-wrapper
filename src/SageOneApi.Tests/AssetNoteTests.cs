@@ -8,14 +8,14 @@ namespace SageOneApi.Tests
 	public class AssetNoteTests : TestBase
 	{
 		[TestMethod]
-		public void GetAll()
+		public void GetAllAssetNotes()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var assetNotes = api.AssetNoteRequest.Get();
 		}
 
 		[TestMethod]
-		public void Get()
+		public void GetAssetNote()
 		{
 			int assetNoteId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -23,7 +23,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void Save()
+		public void SaveAssetNote()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var assetNote = new AssetNote
@@ -39,7 +39,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void Delete()
+		public void DeleteAssetNote()
 		{
 			int assetNoteId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);

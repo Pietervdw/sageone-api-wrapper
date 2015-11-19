@@ -7,21 +7,21 @@ namespace SageOneApi.Tests
     public class AccountTests : TestBase
     {
         [TestMethod]
-        public void GetAll()
+        public void GetAllAccounts()
         {
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var accounts = api.AccountRequest.Get(true);
         }
 
         [TestMethod]
-        public void GetAllByCategory()
+        public void GetAllAccountsByCategory()
         {
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var accounts = api.AccountRequest.GetByCategory(1);
         }
 
         [TestMethod]
-        public void Get()
+        public void GetAccount()
         {
             int accountId = 0;
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -29,7 +29,7 @@ namespace SageOneApi.Tests
         }
 		
         [TestMethod]
-        public void Save()
+        public void SaveAccount()
         {
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var account = new Account();
@@ -40,7 +40,7 @@ namespace SageOneApi.Tests
         }
 		
         [TestMethod]
-        public void Delete()
+        public void DeleteAccount()
         {
             int accountId = 0;
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);

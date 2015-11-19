@@ -7,14 +7,14 @@ namespace SageOneApi.Tests
 	public class SupplierTests : TestBase
 	{
 		[TestMethod]
-		public void GetAll()
+		public void GetAllSuppliers()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var suppliers = api.SupplierRequest.Get();
 		}
 
 		[TestMethod]
-		public void Get()
+		public void GetSupplier()
 		{
 			int supplierId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -40,8 +40,9 @@ namespace SageOneApi.Tests
 				PostalAddress03 = "LA",
 				PostalAddress04 = "70117",
 				PostalAddress05 = "USA",
-				Telephone = "(100) 555-4822"
-			};
+				Telephone = "(100) 555-4822",
+                Active = true
+            };
 
 			api.SupplierRequest.Save(supplier);
 		}

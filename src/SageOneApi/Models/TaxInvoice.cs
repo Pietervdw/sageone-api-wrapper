@@ -19,8 +19,8 @@ namespace SageOneApi.Models
 		public int SalesRepresentativeId { get; set; }
 		public SalesRepresentative SalesRepresentative { get; set; }
 		public int StatusId { get; set; }
-		public string Modified { get; private set; }
-		public string Created { get; private set; }
+		public DateTime Modified { get; private set; }
+		public DateTime Created { get; private set; }
 		public DateTime Date { get; set; }
 		public bool Inclusive { get; set; }
 		public decimal DiscountPercentage { get; set; }

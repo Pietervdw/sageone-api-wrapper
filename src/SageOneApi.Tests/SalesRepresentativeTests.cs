@@ -8,14 +8,14 @@ namespace SageOneApi.Tests
 	public class SalesRepresentativeTests : TestBase
 	{
 		[TestMethod]
-		public void GetAll()
+		public void GetAllSalesRepresentatives()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var salesReps = api.SalesRepresentativeRequest.Get();
 		}
 
 		[TestMethod]
-		public void Get()
+		public void GetSalesRepresentative()
 		{
 			int customerId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -23,7 +23,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void Save()
+		public void SaveSalesRepresentative()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var salesRep = new SalesRepresentative
@@ -39,7 +39,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void Delete()
+		public void DeleteSalesRepresentative()
 		{
 			int customerId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -47,7 +47,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void HasActivity()
+		public void HasActivity_SalesRepresentative()
 		{
 			int customerId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);

@@ -8,14 +8,14 @@ namespace SageOneApi.Tests
 	public class CustomerNoteTests : TestBase
 	{
 		[TestMethod]
-		public void GetAll()
+		public void GetAllCustomerNotes()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var customerNotes = api.CustomerNoteRequest.Get(filter: "CustomerId eq 0");
 		}
 
 		[TestMethod]
-		public void Get()
+		public void GetCustomerNote()
 		{
 			int customerNoteId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -23,7 +23,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void Save()
+		public void SaveCustomerNote()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 		    var customerNote = new CustomerNote
@@ -43,7 +43,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void Delete()
+		public void DeleteCustomerNote()
 		{
 			int customerNoteId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);

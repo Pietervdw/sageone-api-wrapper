@@ -7,14 +7,14 @@ namespace SageOneApi.Tests
     public class ItemTests : TestBase
     {
         [TestMethod]
-        public void GetAll()
+        public void GetAllItems()
         {
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var items = api.ItemRequest.Get();
         }
 
         [TestMethod]
-        public void Get()
+        public void GetItem()
         {
             int itemId = 0;
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -22,7 +22,7 @@ namespace SageOneApi.Tests
         }
 
         [TestMethod]
-        public void Save()
+        public void SaveItem()
         {
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var item = new Item
@@ -36,7 +36,7 @@ namespace SageOneApi.Tests
         }
 
         [TestMethod]
-        public void Delete()
+        public void DeleteItem()
         {
             int itemId = 0;
             var api = new ApiRequest(Username, Password, Apikey, CompanyId);

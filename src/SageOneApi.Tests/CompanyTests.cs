@@ -6,7 +6,7 @@ namespace SageOneApi.Tests
     public class CompanyTests : TestBase
     {
         [TestMethod]
-        public void GetCurrent()
+        public void GetCurrentCompany()
         {
             var api = new ApiRequest(Username, Password, Apikey, 0);
             var currentCompany = api.CompanyRequest.Current();

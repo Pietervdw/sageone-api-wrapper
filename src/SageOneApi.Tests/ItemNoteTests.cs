@@ -4,31 +4,31 @@ using SageOneApi.Models;
 
 namespace SageOneApi.Tests
 {
-	[TestClass]
-	public class ItemNoteTests : TestBase
-	{
-		[TestMethod]
-		public void GetAll()
-		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var itemNotes = api.ItemNoteRequest.Get();
-		}
+    [TestClass]
+    public class ItemNoteTests : TestBase
+    {
+        [TestMethod]
+        public void GetAllItemNotes()
+        {
+            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+            var itemNotes = api.ItemNoteRequest.Get();
+        }
 
-		[TestMethod]
-		public void Get()
-		{
-			int itemNoteId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var itemNote = api.ItemNoteRequest.Get(itemNoteId);
-		}
+        [TestMethod]
+        public void GetItemNote()
+        {
+            int itemNoteId = 0;
+            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+            var itemNote = api.ItemNoteRequest.Get(itemNoteId);
+        }
 
-		[TestMethod]
-		public void Save()
-		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-		    var itemNote = new ItemNote
-		    {
-		        ItemId = 0,
+        [TestMethod]
+        public void SaveItemNote()
+        {
+            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+            var itemNote = new ItemNote
+            {
+                ItemId = 0,
                 Status = true,
                 ActionDate = DateTime.Now,
                 EntryDate = DateTime.Now,
@@ -37,15 +37,15 @@ namespace SageOneApi.Tests
                 Note = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at scelerisque tortor."
             };
 
-		    var newItemNote = api.ItemNoteRequest.Save(itemNote);
-		}
+            var newItemNote = api.ItemNoteRequest.Save(itemNote);
+        }
 
-		[TestMethod]
-		public void Delete()
-		{
-			int itemNoteId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var result = api.ItemNoteRequest.Delete(itemNoteId);
-		}
-	}
+        [TestMethod]
+        public void DeleteItemNote()
+        {
+            int itemNoteId = 0;
+            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+            var result = api.ItemNoteRequest.Delete(itemNoteId);
+        }
+    }
 }

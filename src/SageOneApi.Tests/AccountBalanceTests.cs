@@ -7,14 +7,14 @@ namespace SageOneApi.Tests
 	public class AccountBalanceTests : TestBase
 	{
 		[TestMethod]
-		public void Get()
+		public void GetAccountBalances()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var accountBalances = api.AccountBalanceRequest.Get(DateTime.Now.AddMonths(-1), DateTime.Now);
 		}
 
 		[TestMethod]
-		public void GetBudgetsById()
+		public void GetAccountBalanceBudgetsById()
 		{
 			int id = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
@@ -22,7 +22,7 @@ namespace SageOneApi.Tests
 		}
 
 		[TestMethod]
-		public void GetBudgets()
+		public void GetAccountBalanceBudgets()
 		{
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var budgets = api.AccountBalanceRequest.GetAccountBudgets();
