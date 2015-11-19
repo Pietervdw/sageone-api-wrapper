@@ -13,7 +13,7 @@ namespace SageOneApi.Requests
         
 		public TaxInvoice Get(int id)
 		{
-			var response = _client.Execute<TaxInvoice>(new RestRequest(String.Format("TaxInvoice/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+			var response = _client.Execute<TaxInvoice>(new RestRequest(string.Format("TaxInvoice/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
             StatusDescription = response.StatusDescription;
             StatusCode = response.StatusCode;
             return response.Data;

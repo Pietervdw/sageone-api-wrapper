@@ -13,7 +13,7 @@ namespace SageOneApi.Requests
 
 		public SalesRepresentative Get(int id)
 		{
-			var response = _client.Execute<SalesRepresentative>(new RestRequest(String.Format("SalesRepresentative/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+			var response = _client.Execute<SalesRepresentative>(new RestRequest(string.Format("SalesRepresentative/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
 			return response.Data;
 		}
 

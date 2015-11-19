@@ -13,7 +13,7 @@ namespace SageOneApi.Requests
 
         public ItemNote Get(int id)
         {
-            var response = _client.Execute<ItemNote>(new RestRequest(String.Format("ItemNote/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+            var response = _client.Execute<ItemNote>(new RestRequest(string.Format("ItemNote/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
             return response.Data;
         }
 

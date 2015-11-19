@@ -14,7 +14,7 @@ namespace SageOneApi.Requests
 
 		public Category Get(int id, Enums.CategoryType categoryType)
 		{
-			var response = _client.Execute<Category>(new RestRequest(String.Format("{0}Category/Get/{1}?apikey={2}&companyid={3}", categoryType, id, _apiKey, _companyId), Method.GET));
+			var response = _client.Execute<Category>(new RestRequest(string.Format("{0}Category/Get/{1}?apikey={2}&companyid={3}", categoryType, id, _apiKey, _companyId), Method.GET));
 			return response.Data;
 		}
 

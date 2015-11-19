@@ -98,6 +98,11 @@ Currently, the following objects are represented in the library:
   * Save (Create and Update)
   * Calculate  
   
+- Tax Type
+  * Get All
+  * Get
+  * Save (Create and Update)
+  
 If you need to create test data for your developer account, take a look at the tests inside SampleDataCreate.cs
 
 This project borrowed heavily from the concepts used by Scott Schluer and his [.Net Wrapper for the Highrise Api](https://github.com/scottschluer/highrise-api)

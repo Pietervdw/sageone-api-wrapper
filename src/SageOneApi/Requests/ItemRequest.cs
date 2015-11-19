@@ -14,7 +14,7 @@ namespace SageOneApi.Requests
 
 		public Item Get(int id)
 		{
-			var response = _client.Execute<Item>(new RestRequest(String.Format("Item/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+			var response = _client.Execute<Item>(new RestRequest(string.Format("Item/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
 			return response.Data;
 		}
 

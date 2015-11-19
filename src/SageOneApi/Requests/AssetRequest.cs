@@ -13,7 +13,7 @@ namespace SageOneApi.Requests
 
 		public Asset Get(int id)
 		{
-			var response = _client.Execute<Asset>(new RestRequest(String.Format("Asset/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+			var response = _client.Execute<Asset>(new RestRequest(string.Format("Asset/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
 			return response.Data;
 		}
 

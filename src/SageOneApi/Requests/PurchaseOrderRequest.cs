@@ -13,7 +13,7 @@ namespace SageOneApi.Requests
 
         public PurchaseOrder Get(int id)
         {
-            var response = _client.Execute<PurchaseOrder>(new RestRequest(String.Format("PurchaseOrder/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+            var response = _client.Execute<PurchaseOrder>(new RestRequest(string.Format("PurchaseOrder/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
             StatusDescription = response.StatusDescription;
             StatusCode = response.StatusCode;
             return response.Data;

@@ -13,7 +13,7 @@ namespace SageOneApi.Requests
 
 		public AccountNote Get(int id)
 		{
-			var response = _client.Execute<AccountNote>(new RestRequest(String.Format("AccountNote/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
+			var response = _client.Execute<AccountNote>(new RestRequest(string.Format("AccountNote/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
 			return response.Data;
 		}
 
