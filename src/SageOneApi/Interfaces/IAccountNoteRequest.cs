@@ -29,7 +29,7 @@ namespace SageOneApi.Interfaces
 		/// <summary>
 		/// Deletes an Asset Note
 		/// </summary>
-		/// <param name="id">The ID of the Asset Note to delete</param>
+		/// <param name="id">The ID of the Account Note to delete</param>
 		/// <returns>True if successfully deleted, otherwise false</returns>
 		bool Delete(int id);   
 	}

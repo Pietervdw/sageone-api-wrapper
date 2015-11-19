@@ -51,6 +51,7 @@
     <Compile Include="Interfaces\IAccountNoteRequest.cs" />
     <Compile Include="Interfaces\IAssetNoteRequest.cs" />
     <Compile Include="Interfaces\IAssetRequest.cs" />
+    <Compile Include="Interfaces\IBankAccountRequest.cs" />
     <Compile Include="Interfaces\ICompanyRequest.cs" />
     <Compile Include="Interfaces\ICustomerNoteRequest.cs" />
     <Compile Include="Interfaces\ICustomerRequest.cs" />
@@ -71,6 +72,9 @@
     <Compile Include="Models\AssetLocation.cs" />
     <Compile Include="Models\AssetNote.cs" />
     <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\BankAccount.cs" />
+    <Compile Include="Models\BankFeedAccount.cs" />
+    <Compile Include="Models\BankFeedAccountGroup.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\BudgetItemPeriod.cs" />
     <Compile Include="Models\Category.cs" />
@@ -91,6 +95,7 @@
     <Compile Include="Requests\AccountNoteRequest.cs" />
     <Compile Include="Requests\AssetNoteRequest.cs" />
     <Compile Include="Requests\AssetRequest.cs" />
+    <Compile Include="Requests\BankAccountRequest.cs" />
     <Compile Include="Requests\CategoryRequest.cs" />
     <Compile Include="Requests\CustomerNoteRequest.cs" />
     <Compile Include="Requests\ItemNoteRequest.cs" />

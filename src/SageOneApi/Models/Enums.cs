@@ -20,5 +20,13 @@
 			TimeEntry = 4,
 			Recharge = 5
 		}
+
+	    public enum PaymentMethod
+	    {
+	        Cash = 1,
+            Cheque = 2,
+            CreditCard = 3,
+            Eft = 4
+	    }
 	}
 }
