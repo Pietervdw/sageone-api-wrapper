@@ -64,14 +64,14 @@ namespace SageOneApi.Requests
             return response.Data;
 		}
 
-		//public bool Email(EmailRequest email)
-		//{
-		//	var url = string.Format("TaxInvoice/Email?apikey={0}&companyid={1}", _apiKey, _companyId);
-		//	var request = new RestRequest(url, Method.POST) { JsonSerializer = new JsonSerializer() };
-		//	request.RequestFormat = DataFormat.Json;
-		//	request.AddBody(email);
-		//	var response =  _client.Execute<EmailRequest>(new RestRequest(url, Method.POST));
-		//	return response.ResponseStatus == ResponseStatus.Completed;
-		//}
-	}
+        public bool Email(EmailRequest email)
+        {
+            var url = string.Format("TaxInvoice/Email?apikey={0}&companyid={1}", _apiKey, _companyId);
+            var request = new RestRequest(url, Method.POST) { JsonSerializer = new JsonSerializer() };
+            request.RequestFormat = DataFormat.Json;
+            request.AddBody(email);
+            var response = _client.Execute<EmailRequest>(new RestRequest(url, Method.POST));
+            return response.ResponseStatus == ResponseStatus.Completed;
+        }
+    }
 }

@@ -85,6 +85,12 @@ Currently, the following objects are represented in the library:
   * Get
   * Save (Create and Update)
   * Delete
+
+- Supplier Invoice
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Calculate      
   
 - Tax Invoice
   * Get All

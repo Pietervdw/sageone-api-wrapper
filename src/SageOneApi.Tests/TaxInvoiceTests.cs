@@ -88,5 +88,16 @@ namespace SageOneApi.Tests
             Assert.IsTrue(taxInvoiceRequest.StatusCode == HttpStatusCode.Created);
         }
 
+        [TestMethod]
+        public void EmailTaxInvoice()
+        {
+            var mailRequest = new EmailRequest();
+            mailRequest.ID = 79336711;
+            mailRequest.EmailAddress = "pieter@csoft.co.za";
+            mailRequest.Subject = "Your Invoice";
+            mailRequest.Message = "Your invoice is attached";
+            var result = taxInvoiceRequest.Email(mailRequest);
+        }
+
     }
 }

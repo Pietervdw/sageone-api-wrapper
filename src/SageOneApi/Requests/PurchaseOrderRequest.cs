@@ -21,10 +21,10 @@ namespace SageOneApi.Requests
 
         public PagingResponse<PurchaseOrder> Get(bool includeDetail = false, bool includeSupplierDetails = false, string filter = "", int skip = 0)
         {
-            var url = string.Format("PurchaseOrder/Get?companyid={0}&includeDetail={1}&includeCustomerDetails={2}&apikey={3}", _companyId, includeDetail.ToString().ToLower(), includeSupplierDetails.ToString().ToLower(), _apiKey);
+            var url = string.Format("PurchaseOrder/Get?companyid={0}&includeDetail={1}&includeSupplierDetails={2}&apikey={3}", _companyId, includeDetail.ToString().ToLower(), includeSupplierDetails.ToString().ToLower(), _apiKey);
 
             if (!string.IsNullOrEmpty(filter))
-                url = string.Format("PurchaseOrder/Get?includeDetail={0}&includeCustomerDetails={1}?apikey={2}&companyid={3}&$filter={4}", includeDetail, includeSupplierDetails, _apiKey, _companyId, filter);
+                url = string.Format("PurchaseOrder/Get?includeDetail={0}&includeSupplierDetails={1}?apikey={2}&companyid={3}&$filter={4}", includeDetail, includeSupplierDetails, _apiKey, _companyId, filter);
 
             if (skip > 0)
                 url += "&$skip=" + skip;

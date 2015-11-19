@@ -36,12 +36,11 @@ namespace SageOneApi.Interfaces
 		/// <returns>A <see cref="TaxInvoice"/> object, populated with updated total fields.</returns>
 		TaxInvoice Calculate(TaxInvoice invoice);
 
-
-		///// <summary>
-		///// Emails the specified Tax Invoice.
-		///// </summary>
-		///// <param name="email">The email request.</param>
-		///// <returns>True if successfully sent, otherwise false</returns>
-		//bool Email(EmailRequest email);
-	}
+        /// <summary>
+        /// Emails the specified Tax Invoice.
+        /// </summary>
+        /// <param name="email">The email request.</param>
+        /// <returns>True if successfully sent, otherwise false</returns>
+        bool Email(EmailRequest email);
+    }
 }
