@@ -18,7 +18,7 @@ namespace SageOneApi.Requests
 			return response.Data;
 		}
 
-		public PagingResponse<Item> Get(string filter = "", int skip = 0)
+		public PagingResponse<Item> Get(string filter = "", int skip = 0, bool includeAdditionalItemPrices=false)
 		{
 			var url = string.Format("Item/Get?apikey={0}&companyid={1}", _apiKey, _companyId);
 
@@ -27,6 +27,9 @@ namespace SageOneApi.Requests
 
 			if (skip > 0)
 				url += "&$skip=" + skip;
+
+		    if (includeAdditionalItemPrices)
+		        url += "&includeAdditionalItemPrices=true";
 
 			var request = new RestRequest(url, Method.GET);
 			request.RequestFormat = DataFormat.Json;

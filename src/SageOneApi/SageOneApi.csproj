@@ -47,6 +47,7 @@
     <Compile Include="ApiRequest.cs" />
     <Compile Include="Interfaces\IAccountBalanceRequest.cs" />
     <Compile Include="Interfaces\IAccountRequest.cs" />
+    <Compile Include="Interfaces\IAdditionalPriceListRequest.cs" />
     <Compile Include="Interfaces\IAssetLocationRequest.cs" />
     <Compile Include="Interfaces\IAccountNoteRequest.cs" />
     <Compile Include="Interfaces\IAssetNoteRequest.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Models\AccountBalanceRequestObject.cs" />
     <Compile Include="Models\AccountNote.cs" />
     <Compile Include="Models\AdditionalItemPrice.cs" />
+    <Compile Include="Models\AdditionalPriceList.cs" />
     <Compile Include="Models\Asset.cs" />
     <Compile Include="Models\AssetLocation.cs" />
     <Compile Include="Models\AssetNote.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Models\CommercialDocumentLine.cs" />
     <Compile Include="Models\TaxType.cs" />
     <Compile Include="Requests\AccountBalanceRequest.cs" />
+    <Compile Include="Requests\AdditionalPriceListRequest.cs" />
     <Compile Include="Requests\AssetLocationRequest.cs" />
     <Compile Include="Requests\AccountNoteRequest.cs" />
     <Compile Include="Requests\AssetNoteRequest.cs" />

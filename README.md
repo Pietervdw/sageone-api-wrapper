@@ -15,7 +15,13 @@ Currently, the following objects are represented in the library:
   * Delete
   * Get with System Accounts
   * Get by Category
-
+  
+- Additional Price List
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete
+  
 - Asset
   * Get All
   * Get
