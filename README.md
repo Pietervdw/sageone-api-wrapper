@@ -22,6 +22,12 @@ Currently, the following objects are represented in the library:
   * Save (Create and Update)
   * Delete
   
+- Additional Item Price
+  * Get All
+  * Get
+  * Save (Create and Update)
+  * Delete
+  
 - Asset
   * Get All
   * Get

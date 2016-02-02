@@ -10,33 +10,29 @@ namespace SageOneApi.Tests
 		[TestMethod]
 		public void GetAllAssetLocations()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var assetLocations = api.AssetLocationRequest.Get();
+			var assetLocations = Api.AssetLocationRequest.Get();
 		}
 
 		[TestMethod]
 		public void GetAssetLocations()
 		{
 			int assetLocationId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var assetLocation = api.AssetLocationRequest.Get(assetLocationId);
+			var assetLocation = Api.AssetLocationRequest.Get(assetLocationId);
 		}
 
 		[TestMethod]
 		public void SaveAssetLocation()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var assetLocation = new AssetLocation();
 			assetLocation.Description = "Company HQ";
-			var newAssetLocation = api.AssetLocationRequest.Save(assetLocation);
+			var newAssetLocation = Api.AssetLocationRequest.Save(assetLocation);
 		}
 
 		[TestMethod]
 		public void DeleteAssetLocation()
 		{
 			int assetLocationId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var result = api.AssetLocationRequest.Delete(assetLocationId);
+			var result = Api.AssetLocationRequest.Delete(assetLocationId);
 		}
 	}
 }

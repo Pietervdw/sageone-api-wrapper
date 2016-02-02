@@ -10,22 +10,19 @@ namespace SageOneApi.Tests
 		[TestMethod]
 		public void GetAllSalesRepresentatives()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var salesReps = api.SalesRepresentativeRequest.Get();
+			var salesReps = Api.SalesRepresentativeRequest.Get();
 		}
 
 		[TestMethod]
 		public void GetSalesRepresentative()
 		{
 			int customerId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var salesRep = api.SalesRepresentativeRequest.Get(customerId);
+			var salesRep = Api.SalesRepresentativeRequest.Get(customerId);
 		}
 
 		[TestMethod]
 		public void SaveSalesRepresentative()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var salesRep = new SalesRepresentative
 			{
 				FirstName = "Nancy",
@@ -35,23 +32,21 @@ namespace SageOneApi.Tests
 				Telephone = "(206) 555-9857"
 			};
 
-			api.SalesRepresentativeRequest.Save(salesRep);
+            Api.SalesRepresentativeRequest.Save(salesRep);
 		}
 
 		[TestMethod]
 		public void DeleteSalesRepresentative()
 		{
 			int customerId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var result = api.SalesRepresentativeRequest.Delete(customerId);
+			var result = Api.SalesRepresentativeRequest.Delete(customerId);
 		}
 
 		[TestMethod]
 		public void HasActivity_SalesRepresentative()
 		{
 			int customerId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var result = api.SalesRepresentativeRequest.HasActivity(customerId);
+			var result = Api.SalesRepresentativeRequest.HasActivity(customerId);
 		}
 	}
 }

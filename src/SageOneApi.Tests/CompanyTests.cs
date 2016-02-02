@@ -9,7 +9,7 @@ namespace SageOneApi.Tests
         public void GetCurrentCompany()
         {
             var api = new ApiRequest(Username, Password, Apikey, 0);
-            var currentCompany = api.CompanyRequest.Current();
+            var currentCompany = Api.CompanyRequest.Current();
         }
     }
 }

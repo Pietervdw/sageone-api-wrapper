@@ -15,6 +15,7 @@ namespace SageOneApi
 		public AccountBalanceRequest AccountBalanceRequest { get { return new AccountBalanceRequest(_client, _apiKey, _companyId); } }
 		public AccountNoteRequest AccountNoteRequest { get { return new AccountNoteRequest(_client, _apiKey, _companyId); } }
         public AdditionalPriceListRequest AdditionalPriceListRequest { get { return new AdditionalPriceListRequest(_client, _apiKey, _companyId); } }
+        public AdditionalItemPriceRequest AdditionalItemPriceRequest { get { return new AdditionalItemPriceRequest(_client, _apiKey, _companyId); } }
         public AssetRequest AssetRequest { get { return new AssetRequest(_client, _apiKey, _companyId); } }
 		public AssetLocationRequest AssetLocationRequest { get { return new AssetLocationRequest(_client, _apiKey, _companyId); } }
 		public AssetNoteRequest AssetNoteRequest { get { return new AssetNoteRequest(_client, _apiKey, _companyId); } }

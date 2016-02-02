@@ -10,22 +10,19 @@ namespace SageOneApi.Tests
 		[TestMethod]
 		public void GetAllAssetNotes()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var assetNotes = api.AssetNoteRequest.Get();
+			var assetNotes = Api.AssetNoteRequest.Get();
 		}
 
 		[TestMethod]
 		public void GetAssetNote()
 		{
 			int assetNoteId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var assetNote = api.AssetNoteRequest.Get(assetNoteId);
+			var assetNote = Api.AssetNoteRequest.Get(assetNoteId);
 		}
 
 		[TestMethod]
 		public void SaveAssetNote()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var assetNote = new AssetNote
 			{
 				AssetId = 0,
@@ -35,15 +32,14 @@ namespace SageOneApi.Tests
 				Subject = "A new note about this asset",
 				Note="A Note Here."
 			};
-			var newAssetNote = api.AssetNoteRequest.Save(assetNote);
+			var newAssetNote = Api.AssetNoteRequest.Save(assetNote);
 		}
 
 		[TestMethod]
 		public void DeleteAssetNote()
 		{
 			int assetNoteId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var result = api.AssetNoteRequest.Delete(assetNoteId);
+			var result = Api.AssetNoteRequest.Delete(assetNoteId);
 		}
 	}
 }

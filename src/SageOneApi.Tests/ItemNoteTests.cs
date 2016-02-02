@@ -10,22 +10,19 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void GetAllItemNotes()
         {
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var itemNotes = api.ItemNoteRequest.Get();
+            var itemNotes = Api.ItemNoteRequest.Get();
         }
 
         [TestMethod]
         public void GetItemNote()
         {
             int itemNoteId = 0;
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var itemNote = api.ItemNoteRequest.Get(itemNoteId);
+            var itemNote = Api.ItemNoteRequest.Get(itemNoteId);
         }
 
         [TestMethod]
         public void SaveItemNote()
         {
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var itemNote = new ItemNote
             {
                 ItemId = 0,
@@ -37,15 +34,14 @@ namespace SageOneApi.Tests
                 Note = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at scelerisque tortor."
             };
 
-            var newItemNote = api.ItemNoteRequest.Save(itemNote);
+            var newItemNote = Api.ItemNoteRequest.Save(itemNote);
         }
 
         [TestMethod]
         public void DeleteItemNote()
         {
             int itemNoteId = 0;
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var result = api.ItemNoteRequest.Delete(itemNoteId);
+            var result = Api.ItemNoteRequest.Delete(itemNoteId);
         }
     }
 }

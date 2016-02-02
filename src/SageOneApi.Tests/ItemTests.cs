@@ -9,22 +9,19 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void GetAllItems()
         {
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var items = api.ItemRequest.Get();
+            var items = Api.ItemRequest.Get();
         }
 
         [TestMethod]
         public void GetItem()
         {
             int itemId = 0;
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var item = api.ItemRequest.Get(itemId);
+            var item = Api.ItemRequest.Get(itemId);
         }
 
         [TestMethod]
         public void SaveItem()
         {
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
             var item = new Item
             {
                 Code = "AAA",
@@ -32,15 +29,14 @@ namespace SageOneApi.Tests
                 Active = true,
                 Physical = true
             };
-            api.ItemRequest.Save(item);
+            Api.ItemRequest.Save(item);
         }
 
         [TestMethod]
         public void DeleteItem()
         {
             int itemId = 0;
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var result = api.ItemRequest.Delete(itemId);
+            var result = Api.ItemRequest.Delete(itemId);
         }
     }
 }

@@ -9,8 +9,7 @@ namespace SageOneApi.Tests
 		[TestMethod]
 		public void GetAllSuppliers()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var suppliers = api.SupplierRequest.Get();
+			var suppliers = Api.SupplierRequest.Get();
 		}
 
 		[TestMethod]
@@ -18,14 +17,13 @@ namespace SageOneApi.Tests
 		{
 			int supplierId = 0;
 			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var supplier = api.SupplierRequest.Get(supplierId);
+			var supplier = Api.SupplierRequest.Get(supplierId);
 		}
 
 
 		[TestMethod]
 		public void Save()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var supplier = new Supplier
 			{
 				Name = "New Orleans Cajun Delights",
@@ -44,15 +42,14 @@ namespace SageOneApi.Tests
                 Active = true
             };
 
-			api.SupplierRequest.Save(supplier);
+            Api.SupplierRequest.Save(supplier);
 		}
 
 		[TestMethod]
 		public void Delete()
 		{
 			int supplierId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var supplier = api.SupplierRequest.Delete(supplierId);
+			var supplier = Api.SupplierRequest.Delete(supplierId);
 		}
 	}
 }

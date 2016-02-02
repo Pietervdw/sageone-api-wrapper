@@ -10,22 +10,19 @@ namespace SageOneApi.Tests
 		[TestMethod]
 		public void GetAllAssets()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var assets = api.AssetRequest.Get();
+			var assets = Api.AssetRequest.Get();
 		}
 
 		[TestMethod]
 		public void GetAsset()
 		{
 			int assetId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var asset = api.AssetRequest.Get(assetId);
+			var asset = Api.AssetRequest.Get(assetId);
 		}
 
 		[TestMethod]
 		public void SaveAsset()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var asset = new Asset
 			{
 				Description = "Highback chair",
@@ -36,7 +33,7 @@ namespace SageOneApi.Tests
 				ReplacementValue = 3000,
 				CurrentValue = 4000
 			};
-			var newAsset = api.AssetRequest.Save(asset);
+			var newAsset = Api.AssetRequest.Save(asset);
 
 		}
 
@@ -44,8 +41,7 @@ namespace SageOneApi.Tests
 		public void DeleteAsset()
 		{
 			int assetId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var result = api.AssetRequest.Delete(assetId);
+			var result = Api.AssetRequest.Delete(assetId);
 		}
 	}
 }

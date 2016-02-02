@@ -9,22 +9,19 @@ namespace SageOneApi.Tests
 		[TestMethod]
 		public void GetAllCustomers()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var customers = api.CustomerRequest.Get();
+			var customers = Api.CustomerRequest.Get();
 		}
 
 		[TestMethod]
 		public void GetCustomer()
 		{
 			int customerId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var customer = api.CustomerRequest.Get(customerId);
+			var customer = Api.CustomerRequest.Get(customerId);
 		}
 
 		[TestMethod]
 		public void SaveCustomer()
 		{
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
 			var customer = new Customer
 			{
 				Name = "Mr. David R. Robinett",
@@ -46,15 +43,14 @@ namespace SageOneApi.Tests
 				Telephone = "238-555-0100",
 				SalesRepresentativeId = null
 			};
-			api.CustomerRequest.Save(customer);
+            Api.CustomerRequest.Save(customer);
 		}
 
 		[TestMethod]
 		public void DeleteCustomer()
 		{
 			int customerId = 0;
-			var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-			var result = api.CustomerRequest.Delete(customerId);
+			var result = Api.CustomerRequest.Delete(customerId);
 		}
 	}
 }

@@ -10,16 +10,14 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void GetAdditionalPriceLists()
         {
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var pricelists = api.AdditionalPriceListRequest.Get();
+            var pricelists = Api.AdditionalPriceListRequest.Get();
         }
 
         [TestMethod]
         public void GetAdditionalPriceList()
         {
             var priceListId = 0;
-            var api = new ApiRequest(Username, Password, Apikey, CompanyId);
-            var pricelist = api.AdditionalPriceListRequest.Get(priceListId);
+            var pricelist = Api.AdditionalPriceListRequest.Get(priceListId);
         }
 
         [TestMethod]
@@ -36,7 +34,7 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void DeleteAdditionalPriceList()
         {
-            var priceListId = 10777;
+            var priceListId = 0;
             var result = Api.AdditionalPriceListRequest.Delete(priceListId);
         }
     }
