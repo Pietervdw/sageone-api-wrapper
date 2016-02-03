@@ -63,7 +63,7 @@ namespace SageOneApi.Tests
             invoice.Customer = customer;
 
             // Must set both SalesRepresentativeId and SalesRepresentative in order to work
-            invoice.SalesRepresentativeId = salesRepId; 
+            invoice.SalesRepresentativeId = salesRepId;
             invoice.SalesRepresentative = salesRep;
 
             invoice.Date = DateTime.Now;
@@ -83,7 +83,7 @@ namespace SageOneApi.Tests
             };
 
             invoice.Lines.Add(line1);
-            
+
             var newTaxInvoice = taxInvoiceRequest.Save(invoice);
             Assert.IsTrue(taxInvoiceRequest.StatusCode == HttpStatusCode.Created);
         }
@@ -91,11 +91,15 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void EmailTaxInvoice()
         {
-            var mailRequest = new EmailRequest();
-            mailRequest.ID = 79336711;
-            mailRequest.EmailAddress = "pieter@csoft.co.za";
-            mailRequest.Subject = "Your Invoice";
-            mailRequest.Message = "Your invoice is attached";
+            var mailRequest = new EmailRequest
+            {
+                ID = 0,
+                EmailAddress = "you@email.com",
+                CCAddress = "",
+                BCCAddress = "",
+                Subject = "Your Invoice",
+                Message = "Your invoice is attached"
+            };
             var result = taxInvoiceRequest.Email(mailRequest);
         }
 

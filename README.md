@@ -99,9 +99,9 @@ Currently, the following objects are represented in the library:
   * HasActivity
   
 - Supplier
-  * Get All
+  * Get All / Get All Async
   * Get
-  * Save (Create and Update)
+  * Save (Create and Update) / Save Async
   * Delete
 
 - Supplier Invoice
@@ -114,7 +114,8 @@ Currently, the following objects are represented in the library:
   * Get All
   * Get
   * Save (Create and Update)
-  * Calculate  
+  * Calculate
+  * Email  
   
 - Tax Type
   * Get All

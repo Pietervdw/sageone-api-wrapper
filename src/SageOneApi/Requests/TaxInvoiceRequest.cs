@@ -1,4 +1,6 @@
 ﻿using System;
+using System.CodeDom;
+using System.Linq;
 using RestSharp;
 using RestSharp.Deserializers;
 using RestSharp.Serializers;
@@ -57,20 +59,21 @@ namespace SageOneApi.Requests
 			var url = string.Format("TaxInvoice/Calculate?apikey={0}&companyid={1}", _apiKey, _companyId);
 			var request = new RestRequest(url, Method.POST) { JsonSerializer = new JsonSerializer() };
 			request.RequestFormat = DataFormat.Json;
-			request.AddBody(invoice);
+            request.RequestFormat=DataFormat.Json;
+            request.AddBody(invoice);
 			var response = _client.Execute<TaxInvoice>(request);
             StatusDescription = response.StatusDescription;
             StatusCode = response.StatusCode;
             return response.Data;
 		}
-
+        
         public bool Email(EmailRequest email)
         {
             var url = string.Format("TaxInvoice/Email?apikey={0}&companyid={1}", _apiKey, _companyId);
             var request = new RestRequest(url, Method.POST) { JsonSerializer = new JsonSerializer() };
             request.RequestFormat = DataFormat.Json;
             request.AddBody(email);
-            var response = _client.Execute<EmailRequest>(new RestRequest(url, Method.POST));
+            var response = _client.Execute<EmailRequest>(request);
             return response.ResponseStatus == ResponseStatus.Completed;
         }
     }

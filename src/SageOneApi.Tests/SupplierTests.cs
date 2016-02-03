@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SageOneApi.Models;
 
 namespace SageOneApi.Tests
@@ -12,7 +13,13 @@ namespace SageOneApi.Tests
 			var suppliers = Api.SupplierRequest.Get();
 		}
 
-		[TestMethod]
+        [TestMethod]
+        public async Task GetAllSuppliersAsync()
+        {
+            var suppliers = await Api.SupplierRequest.GetAsync();
+        }
+
+        [TestMethod]
 		public void GetSupplier()
 		{
 			int supplierId = 0;
