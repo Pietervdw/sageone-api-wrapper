@@ -16,7 +16,9 @@ namespace SageOneApi.Requests
 		public Supplier Get(int id)
 		{
 			var response = _client.Execute<Supplier>(new RestRequest(string.Format("Supplier/Get/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId), Method.GET));
-			return response.Data;
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return response.Data;
 		}
 
 		public PagingResponse<Supplier> Get(string filter = "", int skip = 0)
@@ -35,7 +37,9 @@ namespace SageOneApi.Requests
 			var response = _client.Execute(request);
 			JsonDeserializer deserializer = new JsonDeserializer();
 
-			return deserializer.Deserialize<PagingResponse<Supplier>>(response);
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return deserializer.Deserialize<PagingResponse<Supplier>>(response);
 		}
 
 	    public async Task<PagingResponse<Supplier>> GetAsync(string filter = "", int skip = 0)
@@ -53,7 +57,9 @@ namespace SageOneApi.Requests
 
 			var response = await _client.ExecuteTaskAsync(request);
 			JsonDeserializer deserializer = new JsonDeserializer();
-			return deserializer.Deserialize<PagingResponse<Supplier>>(response);
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return deserializer.Deserialize<PagingResponse<Supplier>>(response);
 	    }
 
         public Supplier Save(Supplier supplier)
@@ -63,7 +69,9 @@ namespace SageOneApi.Requests
 			request.RequestFormat = DataFormat.Json;
 			request.AddBody(supplier);
 			var response = _client.Execute<Supplier>(request);
-			return response.Data;
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return response.Data;
 		}
 
 	    public async Task<Supplier> SaveAsync(Supplier supplier)
@@ -73,6 +81,8 @@ namespace SageOneApi.Requests
             request.RequestFormat = DataFormat.Json;
             request.AddBody(supplier);
             var response = await _client.ExecuteTaskAsync<Supplier>(request);
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
             return response.Data;
         }
 
@@ -80,7 +90,9 @@ namespace SageOneApi.Requests
 		{
 			var url = string.Format("Supplier/Delete/{0}?apikey={1}&companyid={2}", id, _apiKey, _companyId);
 			var response = _client.Execute<Company>(new RestRequest(url, Method.DELETE));
-			return response.ResponseStatus == ResponseStatus.Completed;
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return response.ResponseStatus == ResponseStatus.Completed;
 		}
 	}
 }
