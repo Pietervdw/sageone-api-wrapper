@@ -6,31 +6,31 @@ Read more about the API at: [https://accounting.sageone.co.za/Marketing/Develope
 This project is under active development. If you wish to contribute, please follow the existing coding conventions and submit a pull request.
 For more information and usage examples visit [http://www.mythicalmanmoth.com/2015/09/08/net-wrapper-sage-one-accounting-api/](http://www.mythicalmanmoth.com/2015/09/08/net-wrapper-sage-one-accounting-api/)
 
-Currently, the following objects are represented in the library:
+Currently, the following objects/methods are available in the library:
 
 |                       | GetAll              | Get                | Save               | Delete             | Get w/ System Accounts | Get By Category   | Get Current		   | Has Activity	    | Calculate          | Email              |
 | ------------          | ------------------- | ------------------ | ------------------ | ------------------ | ---------------------- | ----------------- | -----------------  | ------------------ | ------------------ | ------------------ |
 | Account               | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark:| 				   |                    |                    |                    |
+| Account Category      | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Additional Price List | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Additional Item Price | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Asset                 | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
+| Asset Category        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Asset Locations       | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Asset Notes	        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Bank Account	        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
+| Bank Account Category | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Customer		        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
+| Customer Category     | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Customer Notes        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Company		        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |	:heavy_check_mark: |                    |                    |                    |
 | Item			        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Item Notes            | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
-| Account Category      | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
-| Asset Category        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
-| Bank Account Category | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
-| Customer Category     | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Item Category         | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
-| Supplier Category     | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Purchase Order        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Sales Representative  | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | :heavy_check_mark: |                    |                    |
 | Supplier              | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					|                    |                    |
+| Supplier Category     | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Supplier Invoice      | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					| :heavy_check_mark: |                    |    
 | Tax Invoice           | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					| :heavy_check_mark: | :heavy_check_mark: |
 | Tax Type              | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | 					 | 					      | 				  |					   | 					|                    |                    |  
