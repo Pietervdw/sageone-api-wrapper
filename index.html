@@ -373,6 +373,18 @@ For more information and usage examples visit <a href="http://www.mythicalmanmot
 
 <p>If you need to create test data for your developer account, take a look at the tests inside SampleDataCreate.cs</p>
 
+<h3>
+<a id="code-examples" class="anchor" href="#code-examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Examples</h3>
+
+<h1>
+<a id="to-get-a-list-of-customers-on-sage-one-youll-use-the-following-c-code" class="anchor" href="#to-get-a-list-of-customers-on-sage-one-youll-use-the-following-c-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>To get a list of customers on Sage One you’ll use the following C# code:</h1>
+
+<p><code>public void GetAllCustomers()
+{
+    var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+    var customers = api.CustomerRequest.Get();
+}</code></p>
+
 <p>This project borrowed heavily from the concepts used by Scott Schluer and his <a href="https://github.com/scottschluer/highrise-api">.Net Wrapper for the Highrise Api</a></p>
         </section>
 
