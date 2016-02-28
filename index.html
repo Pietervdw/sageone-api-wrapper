@@ -376,14 +376,126 @@ For more information and usage examples visit <a href="http://www.mythicalmanmot
 <h3>
 <a id="code-examples" class="anchor" href="#code-examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Examples</h3>
 
-<h1>
-<a id="to-get-a-list-of-customers-on-sage-one-youll-use-the-following-c-code" class="anchor" href="#to-get-a-list-of-customers-on-sage-one-youll-use-the-following-c-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>To get a list of customers on Sage One you’ll use the following C# code:</h1>
+<h5>
+<a id="get-a-list-of-sage-one-customers" class="anchor" href="#get-a-list-of-sage-one-customers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get a list of Sage One Customers:</h5>
 
-<p><code>public void GetAllCustomers()
+<pre><code>public void GetAllCustomers()
 {
     var api = new ApiRequest(Username, Password, Apikey, CompanyId);
     var customers = api.CustomerRequest.Get();
-}</code></p>
+}
+</code></pre>
+
+<h5>
+<a id="get-a-sage-one-customer-with-specific-email-address-odata-query" class="anchor" href="#get-a-sage-one-customer-with-specific-email-address-odata-query" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get a Sage One Customer with specific email address (OData query):</h5>
+
+<pre><code>public void GetCustomerByEmail()
+{
+    string filter = "Email eq 'info@contoso.com'";
+    var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+    var customers = api.CustomerRequest.Get(filter);
+}
+</code></pre>
+
+<h5>
+<a id="get-a-sage-one-customer-by-id" class="anchor" href="#get-a-sage-one-customer-by-id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get a Sage One Customer by id:</h5>
+
+<pre><code>public void GetCustomer()
+{
+    int customerId = 12345;
+    var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+    var customer = api.CustomerRequest.Get(customerId);
+}   
+</code></pre>
+
+<h5>
+<a id="create-a-new-sage-one-customer" class="anchor" href="#create-a-new-sage-one-customer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create a new Sage One Customer:</h5>
+
+<pre><code>public void SaveCustomer()
+{
+    var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+    var customer = new Customer
+    {
+        Name = "Mr. David R. Robinett”,
+        AcceptsElectronicInvoices = true,
+        Active = true,
+        AutoAllocateToOldestInvoice = true,
+        Balance = 0,
+        ContactName = "Mr. David R. Robinett”,
+        DeliveryAddress01 = "Pappelallee 6667”,
+        DeliveryAddress02 = "Solingen”,
+        DeliveryAddress03 = "Nordrhein-Westfalen”,
+        DeliveryAddress04 = "42651”,
+        DeliveryAddress05 = "Germany”,
+        CommunicationMethod = 1,
+        PostalAddress01 = "Pappelallee 6667”,
+        PostalAddress02 = "Solingen”,
+        PostalAddress03 = "Nordrhein-Westfalen”,
+        PostalAddress04 = "42651”,
+        PostalAddress05 = "Germany”,
+        Telephone = "238-555-0100”,
+        SalesRepresentativeId = null
+    };
+    api.CustomerRequest.Save(customer);
+}
+</code></pre>
+
+<h5>
+<a id="delete-a-new-sage-one-customer" class="anchor" href="#delete-a-new-sage-one-customer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Delete a new Sage One Customer:</h5>
+
+<pre><code>public void Delete()
+{
+    int customerId = 12345;
+    var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+    var result = api.CustomerRequest.Delete(customerId);
+}
+</code></pre>
+
+<h5>
+<a id="create-sage-one-tax-invoice" class="anchor" href="#create-sage-one-tax-invoice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create Sage One Tax Invoice:</h5>
+
+<pre><code>public void CreateInvoice()
+{
+    var api = new ApiRequest(Username, Password, Apikey, CompanyId);
+    var customerId = 0;
+    var salesRepId = 0;
+
+    var itemId = 0;
+    var taxTypeId = 0;
+
+    TaxInvoice invoice = new TaxInvoice();
+    var customer = api.CustomerRequest.Get(customerId);
+    var salesRep = api.SalesRepresentativeRequest.Get(salesRepId);
+
+    // Must set both CustomerId and Customer in order to work
+    invoice.CustomerId = customerId;
+    invoice.Customer = customer;
+
+    // Must set both SalesRepresentativeId and SalesRepresentative in order to work
+    invoice.SalesRepresentativeId = salesRepId;
+    invoice.SalesRepresentative = salesRep;
+
+    invoice.Date = DateTime.Now;
+    invoice.DueDate = new DateTime(2015, 12, 12);
+
+    invoice.Lines = new List&lt;CommercialDocumentLine&gt;();
+
+    var line1 = new CommercialDocumentLine
+    {
+        SelectionId = itemId, // This must be an item or account id
+        TaxTypeId = taxTypeId, // Use TaxTypeRequest to get list of Tax Types
+        LineType = 0, // 0=Item/1=Account
+        Quantity = 1,
+        UnitPriceExclusive = 390,
+        UnitPriceInclusive = 390,
+        DiscountPercentage = 0
+    };
+
+    invoice.Lines.Add(line1);
+
+    var newTaxInvoice = api.TaxInvoiceRequest.Save(invoice);
+}   
+</code></pre>
 
 <p>This project borrowed heavily from the concepts used by Scott Schluer and his <a href="https://github.com/scottschluer/highrise-api">.Net Wrapper for the Highrise Api</a></p>
         </section>
