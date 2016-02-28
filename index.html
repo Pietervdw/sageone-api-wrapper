@@ -47,8 +47,8 @@ For more information and usage examples visit <a href="http://www.mythicalmanmot
 <th>Get</th>
 <th>Save</th>
 <th>Delete</th>
-<th>Get w/ System Accounts</th>
-<th>Get By Category</th>
+<th>Get w/System Accounts</th>
+<th style="width:55px;">Get By Category</th>
 <th>Get Current</th>
 <th>Has Activity</th>
 <th>Calculate</th>
@@ -371,7 +371,7 @@ For more information and usage examples visit <a href="http://www.mythicalmanmot
 </tbody>
 </table>
 
-<p>If you need to create test data for your developer account, take a look at the tests inside SampleDataCreate.cs</p>
+<p style="width:135%">If you need to create test data for your developer account, take a look at the tests inside <a href="https://github.com/Pietervdw/sageone-api-wrapper/blob/master/src/SageOneApi.Tests/SampleDataCreate.cs" target="_blank">SampleDataCreate.cs</a></p>
 
 <h3>
 <a id="code-examples" class="anchor" href="#code-examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Examples</h3>
@@ -476,7 +476,7 @@ For more information and usage examples visit <a href="http://www.mythicalmanmot
     invoice.SalesRepresentative = salesRep;
 
     invoice.Date = DateTime.Now;
-    invoice.DueDate = new DateTime(2015, 12, 12);
+    invoice.DueDate = new DateTime(2016, 01, 01);
 
     invoice.Lines = new List&lt;CommercialDocumentLine&gt;();
 
@@ -484,7 +484,7 @@ For more information and usage examples visit <a href="http://www.mythicalmanmot
     {
         SelectionId = itemId, // This must be an item or account id
         TaxTypeId = taxTypeId, // Use TaxTypeRequest to get list of Tax Types
-        LineType = 0, // 0=Item/1=Account
+        LineType = 0, // 0=Item,1=Account
         Quantity = 1,
         UnitPriceExclusive = 390,
         UnitPriceInclusive = 390,
