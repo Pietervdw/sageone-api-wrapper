@@ -28,5 +28,11 @@
             CreditCard = 3,
             Eft = 4
 	    }
-	}
+
+	    public enum EffectType
+	    {
+	        Debit = 1,
+            Credit = 2
+	    }
+    }
 }

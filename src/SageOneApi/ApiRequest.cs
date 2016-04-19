@@ -22,6 +22,8 @@ namespace SageOneApi
         public BankAccountRequest BankAccountRequest { get { return new BankAccountRequest(_client, _apiKey, _companyId); } }
         public ItemRequest ItemRequest { get { return new ItemRequest(_client, _apiKey, _companyId); } }
         public ItemNoteRequest ItemNoteRequest { get { return new ItemNoteRequest(_client, _apiKey, _companyId); } }
+        public ItemMovementRequest ItemMovementRequest { get { return new ItemMovementRequest(_client, _apiKey, _companyId); } }
+        public JournalEntryRequest JournalEntryRequest { get { return new JournalEntryRequest(_client, _apiKey, _companyId); } }
         public CompanyRequest CompanyRequest { get { return new CompanyRequest(_client, _apiKey); } }
         public CustomerRequest CustomerRequest { get { return new CustomerRequest(_client, _apiKey, _companyId); } }
         public CustomerNoteRequest CustomerNoteRequest { get { return new CustomerNoteRequest(_client, _apiKey, _companyId); } }

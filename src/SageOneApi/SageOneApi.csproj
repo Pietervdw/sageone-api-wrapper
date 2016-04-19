@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RestSharp">
-      <HintPath>packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=105.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.2\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,8 +59,10 @@
     <Compile Include="Interfaces\ICustomerNoteRequest.cs" />
     <Compile Include="Interfaces\ICustomerRequest.cs" />
     <Compile Include="Interfaces\ICategoryRequest.cs" />
+    <Compile Include="Interfaces\IItemMovementRequest.cs" />
     <Compile Include="Interfaces\IItemNoteRequest.cs" />
     <Compile Include="Interfaces\IItemRequest.cs" />
+    <Compile Include="Interfaces\IJournalEntryRequest.cs" />
     <Compile Include="Interfaces\IPurchaseOrderRequest.cs" />
     <Compile Include="Interfaces\ISalesRepresentativeRequest.cs" />
     <Compile Include="Interfaces\ISupplierInvoiceRequest.cs" />
@@ -85,8 +88,10 @@
     <Compile Include="Models\EmailRequest.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemMovement.cs" />
     <Compile Include="Models\ItemNote.cs" />
     <Compile Include="Models\ItemReportGroup.cs" />
+    <Compile Include="Models\JournalEntry.cs" />
     <Compile Include="Models\PurchaseOrder.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierInvoice.cs" />
@@ -103,6 +108,7 @@
     <Compile Include="Requests\BankAccountRequest.cs" />
     <Compile Include="Requests\CategoryRequest.cs" />
     <Compile Include="Requests\CustomerNoteRequest.cs" />
+    <Compile Include="Requests\ItemMovementRequest.cs" />
     <Compile Include="Requests\ItemNoteRequest.cs" />
     <Compile Include="Requests\ItemRequest.cs" />
     <Compile Include="Models\Account.cs" />
@@ -115,6 +121,7 @@
     <Compile Include="Requests\AccountRequest.cs" />
     <Compile Include="Requests\CompanyRequest.cs" />
     <Compile Include="Requests\CustomerRequest.cs" />
+    <Compile Include="Requests\JournalEntryRequest.cs" />
     <Compile Include="Requests\PurchaseOrderRequest.cs" />
     <Compile Include="Requests\RequestBase.cs" />
     <Compile Include="Requests\SalesRepresentativeRequest.cs" />
@@ -126,7 +133,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
