@@ -23,10 +23,12 @@ Currently, the following objects/methods are available in the library:
 | Customer		        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Customer Category     | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Customer Notes        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
-| Company		        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |	:heavy_check_mark: |                    |                    |                    |
+| Company		        | :heavy_check_mark:  | :heavy_check_mark: | 					| 					 | 					      | 				  |	:heavy_check_mark: |                    |                    |                    |
 | Item			        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
+| Item Movement         | 					  | :heavy_check_mark: | 					| 					 | 					      | 				  |					   |                    |                    |                    |
 | Item Notes            | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Item Category         | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
+| Journal Entry         | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    | :heavy_check_mark: |                    |
 | Purchase Order        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Sales Representative  | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | :heavy_check_mark: |                    |                    |
 | Supplier              | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					|                    |                    |
