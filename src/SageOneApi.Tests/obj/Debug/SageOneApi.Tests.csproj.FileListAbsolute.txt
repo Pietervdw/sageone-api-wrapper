@@ -1,0 +1,9 @@
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\bin\Debug\SageOneApi.Tests.dll
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\bin\Debug\SageOneApi.Tests.pdb
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\bin\Debug\SageOneApi.dll
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\bin\Debug\RestSharp.dll
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\bin\Debug\SageOneApi.pdb
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\bin\Debug\RestSharp.xml
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\obj\Debug\SageOneApi.Tests.csprojResolveAssemblyReference.cache
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\obj\Debug\SageOneApi.Tests.dll
+G:\Github\sageone-api-wrapper\src\SageOneApi.Tests\obj\Debug\SageOneApi.Tests.pdb
