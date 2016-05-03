@@ -33,13 +33,14 @@ Currently, the following objects/methods are available in the library:
 | Sales Representative  | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | :heavy_check_mark: |                    |                    |
 | Supplier              | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					|                    |                    |
 | Supplier Category     | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
-| Supplier Invoice      | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					| :heavy_check_mark: |                    |    
+| Supplier Invoice      | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					| :heavy_check_mark: | :heavy_check_mark: |    
 | Tax Invoice           | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   | 					| :heavy_check_mark: | :heavy_check_mark: |
 | Tax Type              | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | 					 | 					      | 				  |					   | 					|                    |                    |  
  
 
   
 If you need to create test data for your developer account, take a look at the tests inside SampleDataCreate.cs
+To use the test project, update the username, password, api key and company id inside the TestBase.cs class file
 
 This project borrowed heavily from the concepts used by Scott Schluer and his [.Net Wrapper for the Highrise Api](https://github.com/scottschluer/highrise-api)
 

@@ -35,5 +35,12 @@ namespace SageOneApi.Interfaces
         /// <param name="invoice">The supplier invoice.</param>
         /// <returns>A <see cref="SupplierInvoice"/> object, populated with updated total fields.</returns>
         SupplierInvoice Calculate(SupplierInvoice invoice);
+
+        /// <summary>
+        /// Emails the specified Supplier Invoice.
+        /// </summary>
+        /// <param name="email">The email request.</param>
+        /// <returns>True if successfully sent, otherwise false</returns>
+        bool Email(EmailRequest email);
     }
 }

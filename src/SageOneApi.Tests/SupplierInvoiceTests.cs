@@ -76,6 +76,21 @@ namespace SageOneApi.Tests
             var calculatedInvoice = supplierInvoiceRequest.Calculate(invoice);
             var updatedInvoice = supplierInvoiceRequest.Save(calculatedInvoice);
         }
-    
+
+        [TestMethod]
+        public void EmailSupplierInvoice()
+        {
+            int invoiceId = 112897987;
+            var mailRequest = new EmailRequest
+            {
+                ID = invoiceId, // This must be the id of the supplier invoice
+                EmailAddress = "you@email.com",
+                CCAddress = "",
+                BCCAddress = "",
+                Subject = "Your Supplier Invoice",
+                Message = "Your supplier invoice is attached"
+            };
+            supplierInvoiceRequest.Email(mailRequest);
+        }
     }
 }
