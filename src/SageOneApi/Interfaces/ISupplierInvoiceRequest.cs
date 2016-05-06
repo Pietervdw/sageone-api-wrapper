@@ -1,4 +1,5 @@
-﻿using SageOneApi.Models;
+﻿using System.Threading.Tasks;
+using SageOneApi.Models;
 
 namespace SageOneApi.Interfaces
 {
@@ -28,6 +29,14 @@ namespace SageOneApi.Interfaces
         /// <param name="invoice">The supplier invoice.</param>
         /// <returns>A <see cref="SupplierInvoice"/> object, populated with updated/new values</returns>
         SupplierInvoice Save(SupplierInvoice invoice);
+
+        /// <summary>
+        /// Saves the specified supplier asynchronously.
+        /// </summary>
+        /// <param name="invoice">The supplier invoice.</param>
+        /// <returns>A <see cref="SupplierInvoice"/> object, populated with updated/new values</returns>
+        Task<SupplierInvoice> SaveAsync(SupplierInvoice invoice);
+
 
         /// <summary>
         /// Calculates the specified supplier invoice total fields

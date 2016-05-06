@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Deserializers;
 using RestSharp.Serializers;
@@ -47,6 +48,18 @@ namespace SageOneApi.Requests
             request.RequestFormat = DataFormat.Json;
             request.AddBody(invoice);
             var response = _client.Execute<SupplierInvoice>(request);
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return response.Data;
+        }
+
+        public async Task<SupplierInvoice> SaveAsync(SupplierInvoice invoice)
+        {
+            var url = string.Format("SupplierInvoice/Save?apikey={0}&companyid={1}", _apiKey, _companyId);
+            var request = new RestRequest(url, Method.POST) { JsonSerializer = new JsonSerializer() };
+            request.RequestFormat = DataFormat.Json;
+            request.AddBody(invoice);
+            var response = await _client.ExecuteTaskAsync<SupplierInvoice>(request);
             StatusDescription = response.StatusDescription;
             StatusCode = response.StatusCode;
             return response.Data;

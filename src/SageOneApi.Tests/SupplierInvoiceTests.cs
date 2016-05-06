@@ -51,7 +51,7 @@ namespace SageOneApi.Tests
             {
                 SelectionId = itemId, // This must be an item or account id
                 TaxTypeId = taxTypeId, // Use TaxTypeRequest to get list of Tax Types
-                LineType = 0, // 0=Item/1=Account
+                LineType = 0, // 0=Item/1=Account -> See Enums.CommercialDocumentLineType
                 Quantity = 1,
                 UnitPriceExclusive = 390,
                 UnitPriceInclusive = 390,
