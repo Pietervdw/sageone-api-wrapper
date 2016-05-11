@@ -1,4 +1,6 @@
-﻿using SageOneApi.Models;
+﻿using RestSharp;
+using RestSharp.Serializers;
+using SageOneApi.Models;
 namespace SageOneApi.Interfaces
 {
     public interface IBankTransactionRequest
@@ -19,8 +21,15 @@ namespace SageOneApi.Interfaces
         /// <param name="skip">OData skip parameter. Skips the number of records. Used for paging.</param>
         PagingResponse<BankTransaction> Get(string filter = "", int skip = 0);
 
-        
-    }
 
+
+        /// <summary>
+        /// Saves the specified Bank Transaction.
+        /// </summary>
+        /// <param name="bankTransaction">The Bank Transaction.</param>
+        /// <returns>A <see cref="BankTransaction"/> object, populated with updated/new values</returns>
+        BankTransaction Save(BankTransaction bankTransaction);
+
+    }
 
 }

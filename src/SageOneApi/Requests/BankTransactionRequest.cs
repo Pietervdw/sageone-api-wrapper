@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Deserializers;
+using RestSharp.Serializers;
 using SageOneApi.Interfaces;
 using SageOneApi.Models;
 
@@ -51,6 +52,25 @@ namespace SageOneApi.Requests
             StatusDescription = response.StatusDescription;
             StatusCode = response.StatusCode;
             return deserializer.Deserialize<PagingResponse<BankTransaction>>(response);
+
+
+
+        }
+
+        public BankTransaction Save(BankTransaction bankTransaction)
+        {            
+            var url = string.Format("BankTransaction/Save?apikey={0}&companyid={1}", _apiKey, _companyId);
+            var request = new RestRequest(url, Method.POST)
+            {
+                JsonSerializer = new JsonSerializer(),
+                RequestFormat = DataFormat.Json
+            };
+            request.AddBody(bankTransaction);
+            var response = _client.Execute<BankTransaction>(request);
+            StatusDescription = response.StatusDescription;
+            StatusCode = response.StatusCode;
+            return response.Data;
+
         }
     }
 }
