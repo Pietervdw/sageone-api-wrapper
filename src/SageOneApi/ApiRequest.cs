@@ -20,6 +20,7 @@ namespace SageOneApi
 		public AssetLocationRequest AssetLocationRequest { get { return new AssetLocationRequest(_client, _apiKey, _companyId); } }
 		public AssetNoteRequest AssetNoteRequest { get { return new AssetNoteRequest(_client, _apiKey, _companyId); } }
         public BankAccountRequest BankAccountRequest { get { return new BankAccountRequest(_client, _apiKey, _companyId); } }
+        public BankTransactionRequest BankTransactionRequest { get { return new BankTransactionRequest(_client, _apiKey, _companyId); } }
         public ItemRequest ItemRequest { get { return new ItemRequest(_client, _apiKey, _companyId); } }
         public ItemNoteRequest ItemNoteRequest { get { return new ItemNoteRequest(_client, _apiKey, _companyId); } }
         public ItemMovementRequest ItemMovementRequest { get { return new ItemMovementRequest(_client, _apiKey, _companyId); } }
