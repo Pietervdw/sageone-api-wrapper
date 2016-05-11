@@ -1,13 +1,10 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace SageOneApi.Models
 {
-    public class BankTransaction
+    public class BankTransaction : BaseModel
     {
-      public int  ID { get; set; }
       public DateTime Date{get; set;}
       public int BankAccountId {get; set;} 
       public int Type{get; set;}

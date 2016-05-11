@@ -10,7 +10,6 @@ namespace SageOneApi.Interfaces
         /// </summary>
         /// <param name="id">The ID of the Asset.</param>
         /// <returns>A <see cref="BankTransaction"/> object</returns>
-        /// 
         BankTransaction Get(int id);
 
         /// <summary>
@@ -20,8 +19,6 @@ namespace SageOneApi.Interfaces
         /// <param name="filter">Optional OData Filter Query read more at http://www.odata.org/documentation/odata-version-2-0/uri-conventions/#FilterSystemQueryOption </param>
         /// <param name="skip">OData skip parameter. Skips the number of records. Used for paging.</param>
         PagingResponse<BankTransaction> Get(string filter = "", int skip = 0);
-
-
 
         /// <summary>
         /// Saves the specified Bank Transaction.

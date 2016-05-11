@@ -20,6 +20,7 @@ Currently, the following objects/methods are available in the library:
 | Asset Notes	        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Bank Account	        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Bank Account Category | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
+| Bank Transaction      | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | 					 | 					      | 				  |					   |                    |                    |                    |
 | Customer		        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Customer Category     | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
 | Customer Notes        | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 					      | 				  |					   |                    |                    |                    |
