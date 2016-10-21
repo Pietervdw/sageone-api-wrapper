@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SageOneApi.Models;
 
 namespace SageOneApi.Tests
@@ -38,7 +39,7 @@ namespace SageOneApi.Tests
         [TestMethod]
         public void DeleteAccount()
         {
-            int accountId = 0;
+            int accountId = 7769427;
             var result = Api.AccountRequest.Delete(accountId);
         }
     }

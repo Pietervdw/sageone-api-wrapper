@@ -12,7 +12,8 @@ namespace SageOneApi
         private readonly IRestClient _client;
 
         public AccountRequest AccountRequest { get { return new AccountRequest(_client, _apiKey, _companyId); } }
-		public AccountBalanceRequest AccountBalanceRequest { get { return new AccountBalanceRequest(_client, _apiKey, _companyId); } }
+        public AccountReceiptRequest AccountReceiptRequest { get { return new AccountReceiptRequest(_client, _apiKey, _companyId); } }
+        public AccountBalanceRequest AccountBalanceRequest { get { return new AccountBalanceRequest(_client, _apiKey, _companyId); } }
 		public AccountNoteRequest AccountNoteRequest { get { return new AccountNoteRequest(_client, _apiKey, _companyId); } }
         public AdditionalPriceListRequest AdditionalPriceListRequest { get { return new AdditionalPriceListRequest(_client, _apiKey, _companyId); } }
         public AdditionalItemPriceRequest AdditionalItemPriceRequest { get { return new AdditionalItemPriceRequest(_client, _apiKey, _companyId); } }
