@@ -65,6 +65,7 @@
     <Compile Include="CustomerTests.cs" />
     <Compile Include="SupplierInvoiceTests.cs" />
     <Compile Include="PurchaseOrderTests.cs" />
+    <Compile Include="QuoteTests.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="ItemTests.cs" />
     <Compile Include="CategoryTests.cs" />
