@@ -61,6 +61,7 @@
     <Compile Include="Interfaces\ICustomerNoteRequest.cs" />
     <Compile Include="Interfaces\ICustomerRequest.cs" />
     <Compile Include="Interfaces\ICategoryRequest.cs" />
+    <Compile Include="Interfaces\ICustomerZoneRequest.cs" />
     <Compile Include="Interfaces\IItemMovementRequest.cs" />
     <Compile Include="Interfaces\IItemNoteRequest.cs" />
     <Compile Include="Interfaces\IItemRequest.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Requests\BankTransactionRequest.cs" />
     <Compile Include="Requests\CategoryRequest.cs" />
     <Compile Include="Requests\CustomerNoteRequest.cs" />
+    <Compile Include="Requests\CustomerZoneRequest.cs" />
     <Compile Include="Requests\ItemMovementRequest.cs" />
     <Compile Include="Requests\ItemNoteRequest.cs" />
     <Compile Include="Requests\ItemRequest.cs" />
